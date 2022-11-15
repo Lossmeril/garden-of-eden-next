@@ -1,5 +1,6 @@
 import React from "react";
 import {
+  AspectRatio,
   Box,
   Button,
   Center,
@@ -88,10 +89,18 @@ export default function Home() {
         heading="Trailer"
         bg="rgba(103,71,11,0.5)"
         color="white"
-      ></Section>
+      >
+        <AspectRatio maxW="50vw" ratio={16 / 9} ml="auto" mr="auto">
+          <iframe
+            title="Zahrada Boží Trailer"
+            src="https://www.youtube.com/embed/5LBdLa9f_zI"
+            allowFullScreen
+          />
+        </AspectRatio>
+      </Section>
 
       <Section anchor="donations" heading="Projekt podporují" bg="white">
-        <Heading as="h3" size="lg" mt={10} mb={6}>
+        <Heading as="h3" size="lg" mt="4rem" mb={6}>
           Generální partner
         </Heading>
         <Center>
@@ -104,7 +113,7 @@ export default function Home() {
           </Link>
         </Center>
 
-        <Heading as="h3" size="lg" mt={10} mb={6}>
+        <Heading as="h3" size="lg" mt="5rem" mb={6}>
           Za podpory
         </Heading>
         <Stack
@@ -128,35 +137,21 @@ export default function Home() {
           </Box>
         </Stack>
 
-        <Divider m={6} />
-
-        <Heading as="h3" size="lg" mt={10} mb={6}>
+        <Heading as="h3" size="lg" mt="5rem" mb={6}>
           Skrze HitHit přispěli
         </Heading>
 
         <Wrap
           className="contributor-wrap"
           align="center"
-          spacingX={0}
-          spacingY={4}
+          spacing={0}
           justify="center"
         >
           {contributors.map((contributor) => (
-            <WrapItem
-              /*w={{
-                base: "100%",
-                sm: "50%",
-                md: "33%",
-                lg: "25%",
-                xl: "16.65%",
-              }}*/
-              h="80px"
-              key={contributor}
-            >
+            <WrapItem h="80px" key={contributor}>
               <Box p={2} w="100%" h="100%" position="relative">
                 <Image
                   src="/img/plant.png"
-                  className="plant"
                   alt=""
                   position="absolute"
                   width="50px"
@@ -170,7 +165,7 @@ export default function Home() {
                   }
                 />
                 <Center w="100%" h="100%">
-                  <Box px={5} py={3} borderRadius="0.5rem">
+                  <Box pl={4} pr={10} py={3} borderRadius="0.5rem">
                     <Text
                       className="contributor"
                       textAlign="center"
@@ -184,25 +179,33 @@ export default function Home() {
               </Box>
             </WrapItem>
           ))}
-          <WrapItem
-            /*w={{
-                base: "100%",
-                sm: "50%",
-                md: "33%",
-                lg: "25%",
-                xl: "16.65%",
-              }}*/
-            h="80px"
-          >
-            <Box p={5} w="100%" h="100%">
+
+          <WrapItem h="80px">
+            <Box p={5} w="100%" h="100%" position="relative">
+              <Image
+                src="/img/sad-little-cup.png"
+                alt=""
+                position="absolute"
+                width="50px"
+                height="50px"
+                top="10px"
+                left="-30px"
+                transform={
+                  "rotate(" + Math.floor(Math.random() * (20 + 1) - 10) + "deg)"
+                }
+              />
               <Center w="100%" h="100%">
-                <Text className="contributor" textAlign="center" fontSize="lg">
-                  <Link href="">
-                    <Box px={5} py={3} borderRadius="0.5rem" bg="green.100">
+                <Link href="">
+                  <Box px={5} py={3} borderRadius="0.5rem" bg="green.100">
+                    <Text
+                      className="contributor"
+                      textAlign="center"
+                      fontSize="lg"
+                    >
                       Vaše jméno může být tady!
-                    </Box>
-                  </Link>
-                </Text>
+                    </Text>
+                  </Box>
+                </Link>
               </Center>
             </Box>
           </WrapItem>
