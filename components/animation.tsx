@@ -1,18 +1,22 @@
 import * as React from "react";
-import { Box } from "@chakra-ui/react";
+import { Box, Image } from "@chakra-ui/react";
 
 const Animation = () => {
   return (
     <Box className="animation-box">
       <Box className="elements">
-        <img className="imrich" src="img/imrich.webp" />
+        <Image
+          className="imrich"
+          src="img/imrich.webp"
+          alt="Imrich, protagonista filmu Zahrada Boží"
+        />
         <Box className="aether" w="100%" h="100%">
-          <img className="rotating" src="img/aether.png" />
+          <Image className="rotating" src="img/aether.png" alt="" />
         </Box>
         <Box className="clock" w="100%" h="100%">
-          <img className="rotating-slow" src="img/clock.png" />
+          <Image className="rotating-slow" src="img/clock.png" alt="" />
         </Box>
-        <img className="smoke pulsing" src="img/smoke.png" />
+        <Image className="smoke pulsing" src="img/smoke.png" alt="" />
       </Box>
     </Box>
   );

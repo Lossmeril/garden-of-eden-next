@@ -1,9 +1,9 @@
 import { ChakraProvider } from "@chakra-ui/react";
 import React, { useState, useEffect } from "react";
-import Navbar from "./navbar";
+import Navbar from "../components/navbar";
 
-//import theme from "../@chakra-ui/gatsby-plugin/theme";
-import Footer from "./footer";
+import theme from "../styles/theme";
+import Footer from "../components/footer";
 
 const Layout = ({ children }: any) => {
   // determined if page has scrolled and if the view is on mobile
@@ -27,7 +27,7 @@ const Layout = ({ children }: any) => {
   }, [scrolled]);
 
   return (
-    <ChakraProvider>
+    <ChakraProvider theme={theme}>
       <Navbar dataActive={scrolled} />
       <main>{children}</main>
       <Footer />

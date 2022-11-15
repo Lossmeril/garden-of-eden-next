@@ -3,7 +3,9 @@ import {
   Box,
   Button,
   Center,
+  Divider,
   Heading,
+  Image,
   SimpleGrid,
   Stack,
   Text,
@@ -40,7 +42,7 @@ export default function Home() {
           <Box h="100%" overflow="hidden" position="relative">
             <Box className="headings">
               <VStack gap={8}>
-                <img src="/img/logo-cz.png" alt="Zahrada Boží" width="50%" />
+                <Image src="/img/logo-cz.png" alt="Zahrada Boží" width="50%" />
                 <Heading as="h1" display="none">
                   Zahrada Boží
                 </Heading>
@@ -92,17 +94,42 @@ export default function Home() {
         <Heading as="h3" size="lg" mt={10} mb={6}>
           Generální partner
         </Heading>
+        <Center>
+          <Link href="">
+            <Box px={5} py={10} borderRadius="1rem" w="30rem" bg="green.100">
+              <Text textAlign="center">
+                Vaše logo, nebo jméno může být tady!
+              </Text>
+            </Box>
+          </Link>
+        </Center>
+
         <Heading as="h3" size="lg" mt={10} mb={6}>
           Za podpory
         </Heading>
-        <Center my={6}>
+        <Stack
+          my={6}
+          direction={{ base: "column", md: "row" }}
+          justify="center"
+        >
           <Box mx={{ base: 4, md: 12 }}>
-            <img className="partner-logo" src="/img/Impuls HK black.png" />
+            <Image
+              className="partner-logo"
+              src="/img/Impuls HK black.png"
+              alt="Centrum uměleckých aktivit Impuls Hradec Králové"
+            />
           </Box>
           <Box mx={{ base: 4, md: 12 }}>
-            <img className="partner-logo" src="/img/nu.png" />
+            <Image
+              className="partner-logo"
+              src="/img/nu.png"
+              alt="Northumbria University v Newcastle upon Tyne"
+            />
           </Box>
-        </Center>
+        </Stack>
+
+        <Divider m={6} />
+
         <Heading as="h3" size="lg" mt={10} mb={6}>
           Skrze HitHit přispěli
         </Heading>
@@ -112,32 +139,73 @@ export default function Home() {
           align="center"
           spacingX={0}
           spacingY={4}
+          justify="center"
         >
           {contributors.map((contributor) => (
             <WrapItem
-              w={{
+              /*w={{
                 base: "100%",
                 sm: "50%",
                 md: "33%",
                 lg: "25%",
                 xl: "16.65%",
-              }}
+              }}*/
               h="80px"
               key={contributor}
             >
-              <Box bgColor="#ffffff80" p={5} w="100%" h="100%">
+              <Box p={2} w="100%" h="100%" position="relative">
+                <Image
+                  src="/img/plant.png"
+                  className="plant"
+                  alt=""
+                  position="absolute"
+                  width="50px"
+                  height="50px"
+                  top="10px"
+                  left="-20px"
+                  transform={
+                    "rotate(" +
+                    Math.floor(Math.random() * (20 + 1) - 10) +
+                    "deg)"
+                  }
+                />
                 <Center w="100%" h="100%">
-                  <Text
-                    className="contributor"
-                    textAlign="center"
-                    fontSize="xl"
-                  >
-                    {contributor}
-                  </Text>
+                  <Box px={5} py={3} borderRadius="0.5rem">
+                    <Text
+                      className="contributor"
+                      textAlign="center"
+                      fontSize="lg"
+                      fontWeight="600"
+                    >
+                      {contributor}
+                    </Text>
+                  </Box>
                 </Center>
               </Box>
             </WrapItem>
           ))}
+          <WrapItem
+            /*w={{
+                base: "100%",
+                sm: "50%",
+                md: "33%",
+                lg: "25%",
+                xl: "16.65%",
+              }}*/
+            h="80px"
+          >
+            <Box p={5} w="100%" h="100%">
+              <Center w="100%" h="100%">
+                <Text className="contributor" textAlign="center" fontSize="lg">
+                  <Link href="">
+                    <Box px={5} py={3} borderRadius="0.5rem" bg="green.100">
+                      Vaše jméno může být tady!
+                    </Box>
+                  </Link>
+                </Text>
+              </Center>
+            </Box>
+          </WrapItem>
         </Wrap>
       </Section>
 
