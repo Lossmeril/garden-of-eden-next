@@ -105,7 +105,13 @@ export default function Home() {
         </Heading>
         <Center>
           <Link href="">
-            <Box px={5} py={10} borderRadius="1rem" w="30rem" bg="green.100">
+            <Box
+              px={5}
+              py={10}
+              borderRadius="1rem"
+              w={{ base: "100%", md: "100%" }}
+              bg="green.100"
+            >
               <Text textAlign="center">
                 Vaše logo, nebo jméno může být tady!
               </Text>
@@ -119,6 +125,7 @@ export default function Home() {
         <Stack
           my={6}
           direction={{ base: "column", md: "row" }}
+          spacing={12}
           justify="center"
         >
           <Box mx={{ base: 4, md: 12 }}>
@@ -126,6 +133,7 @@ export default function Home() {
               className="partner-logo"
               src="/img/Impuls HK black.png"
               alt="Centrum uměleckých aktivit Impuls Hradec Králové"
+              mx="auto"
             />
           </Box>
           <Box mx={{ base: 4, md: 12 }}>
@@ -133,6 +141,7 @@ export default function Home() {
               className="partner-logo"
               src="/img/nu.png"
               alt="Northumbria University v Newcastle upon Tyne"
+              mx="auto"
             />
           </Box>
         </Stack>
@@ -148,7 +157,12 @@ export default function Home() {
           justify="center"
         >
           {contributors.map((contributor) => (
-            <WrapItem h="80px" key={contributor}>
+            <WrapItem
+              h="80px"
+              key={contributor}
+              w={{ base: "90%", sm: "50%", md: "unset" }}
+              pl={{ base: 8, md: 0 }}
+            >
               <Box p={2} w="100%" h="100%" position="relative">
                 <Image
                   src="/img/plant.png"
