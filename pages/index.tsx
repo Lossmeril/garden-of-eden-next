@@ -19,6 +19,11 @@ import Animation from "../components/animation";
 import { IoMdFilm } from "react-icons/io";
 import { IoHeartCircleOutline } from "react-icons/io5";
 import { RiArrowRightSFill } from "react-icons/ri";
+import AboutSection from "../components/sections/about";
+import TrailerSection from "../components/sections/trailer";
+import ContributorsSection from "../components/sections/contributors";
+import ContactsSection from "../components/sections/contacts";
+import DownloadsSection from "../components/sections/downloads";
 
 /*IMPORT SECTIONS*/
 
@@ -72,6 +77,16 @@ export default function Home() {
           </Box>
         </SimpleGrid>
       </Box>
+
+      <AboutSection />
+
+      <TrailerSection />
+
+      <ContributorsSection />
+
+      <ContactsSection />
+
+      <DownloadsSection />
     </>
   );
 }
