@@ -1,5 +1,11 @@
-import { AspectRatio, Box } from "@chakra-ui/react";
+import { AspectRatio, Box, Spinner } from "@chakra-ui/react";
+import dynamic from "next/dynamic";
+import { Suspense } from "react";
 import Section from "../section";
+
+const LazyYouTube = dynamic(() => import("../youtube"), {
+  suspense: true,
+});
 
 const TrailerSection = () => {
   return (
@@ -16,11 +22,21 @@ const TrailerSection = () => {
           ml="auto"
           mr="auto"
         >
-          <iframe
-            title="Zahrada Boží Trailer"
-            src="https://www.youtube.com/embed/5LBdLa9f_zI"
-            allowFullScreen
-          />
+          <Suspense
+            fallback={
+              <Box bgColor="blackAlpha.400">
+                <Spinner
+                  thickness="4px"
+                  speed="0.65s"
+                  emptyColor="whiteAlpha.800"
+                  color="green.500"
+                  size="xl"
+                />
+              </Box>
+            }
+          >
+            <LazyYouTube />
+          </Suspense>
         </AspectRatio>
       </Box>
     </Section>
