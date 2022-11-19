@@ -1,10 +1,14 @@
 import React from "react";
+import Head from "next/head";
+import Link from "next/link";
 import {
   AspectRatio,
   Box,
   Button,
+  Card,
+  CardBody,
+  CardFooter,
   Center,
-  Divider,
   Heading,
   Image,
   SimpleGrid,
@@ -23,11 +27,10 @@ import Animation from "../components/animation";
 import { IoMdFilm } from "react-icons/io";
 import { IoHeartCircleOutline } from "react-icons/io5";
 import { RiArrowRightSFill } from "react-icons/ri";
+import { BiChevronDown } from "react-icons/bi";
 
 /*IMPORT DATA FOR DYNAMIC DISPLAYING*/
 import contributors from "../datasets/contributors";
-import Head from "next/head";
-import Link from "next/link";
 
 export default function Home() {
   return (
@@ -81,7 +84,59 @@ export default function Home() {
       </Box>
 
       <Section anchor="about" heading="O filmu" bg="white">
-        <SimpleGrid columns={2}></SimpleGrid>
+        <SimpleGrid columns={2}>
+          <Box>
+            <Text>
+              &quot;To bylo už dávno. To jsem byl ještě mladý a krásný. Teď už
+              jsem jenom krásný...&quot;
+            </Text>
+            <Text>- Imrich Špitálský</Text>
+            <Heading as="h3">Treatment</Heading>
+            <Text>
+              Dokumentární snímek zachycující intimní portrét muže smiřujícího
+              se se svým věkem a ztrátou celoživotního díla. Prožívající podzim
+              svého života pečuje o svou zahradu, vtipkuje se svou ženou a
+              vzpomíná na celoživotní cestu plnou lásky k přírodě, radosti,
+              strastí a cibulí.
+            </Text>
+            <Heading as="h3">Synopse</Heading>
+            <Text>
+              Před padesáti lety si pronajal Imrich pozemek na okraji Ústí nad
+              Orlicí v zahrádkářské osadě. V té době ovšem pozemek nebyl ničím
+              než kopřivami zarostlou bažinou. Pocházeje z jižního Slovenska,
+              kde půda znamenala vše, Imrich věnoval většinu svého života
+              zkultivování své zahrady, která se stala jeho láskou a náplní
+              volného času.
+            </Text>
+            <Text>
+              Od jara do zimy, rok za rokem se o ni staral a vedl zahrádkářský
+              výbor. Mezitím přišly děti, vnoučata a změna režimu. Po revoluci
+              se však pozemek stal předmětem církevních restitucí a veškerá
+              snaha o jeho odkoupení narazila na nepřátelský odpor. Imrich byl
+              tímto rozhodnutím zdrcen, ale dodnes nadále aktivně pečuje o
+              zahrádku.
+            </Text>
+            <Text>
+              Ve svém boji musí čelit stáří, počasí, škůdcům, vlastníkům půdy a
+              zhoršujícímu se zdravotnímu stavu. Existuje šance, že se Imrich
+              „na stará kolena“ vzdá zahrady a prodá ji, nebo se mu stane tento
+              kus země osudným?
+            </Text>
+            <Text>
+              Dokumentární film nabízí intimní portrét stárnoucího člověka s
+              láskou k přírodě, který se smiřiuje se svým věkem a ztrátou
+              celoživotního díla. Mezitím vzpomíná s humorem na své mládí,
+              vtipkuje se svou ženou a pyšní se z každého výsledku a malého
+              vítězství, které mu půda a život dopřeje.
+            </Text>
+          </Box>
+          <Box>
+            <Heading as="h3">Tým</Heading>
+            <Heading as="h4">Michal Špitálský</Heading>
+            <Heading as="h4">Jakub Tesařík</Heading>
+            <Heading as="h4">Sam Enticknap</Heading>
+          </Box>
+        </SimpleGrid>
       </Section>
 
       <Section
@@ -179,7 +234,7 @@ export default function Home() {
                   }
                 />
                 <Center w="100%" h="100%">
-                  <Box pl={4} pr={10} py={3} borderRadius="0.5rem">
+                  <Box pl={4} pr={10} py={3} borderRadius="md">
                     <Text
                       className="contributor"
                       textAlign="center"
@@ -210,7 +265,7 @@ export default function Home() {
               />
               <Center w="100%" h="100%">
                 <Link href="">
-                  <Box px={5} py={3} borderRadius="0.5rem" bg="green.100">
+                  <Box px={5} py={3} borderRadius="md" bg="green.100">
                     <Text
                       className="contributor"
                       textAlign="center"
@@ -228,7 +283,99 @@ export default function Home() {
 
       <Section anchor="contacts" heading="Kontakty"></Section>
 
-      <Section anchor="press" heading="Ke stažení"></Section>
+      <Section anchor="press" heading="Ke stažení" bg="white">
+        <Wrap
+          align="center"
+          spacing={8}
+          justify="center"
+          py={5}
+          className="downloads-wrap"
+        >
+          {/* KARTA PRO STÁHNUTÍ LOGA */}
+          <WrapItem>
+            <Card maxW="sm">
+              <CardBody>
+                <Image
+                  src="/img/Impuls HK black.png"
+                  borderRadius="lg"
+                  alt=""
+                />
+                <Stack mt="6" spacing="3">
+                  <Heading as="h3" size="md">
+                    Logotyp
+                  </Heading>
+                  <Text>
+                    This sofa is perfect for modern tropical spaces, baroque
+                    inspired spaces, earthy toned spaces and for people who love
+                    a chic design with a sprinkle of vintage design.
+                  </Text>
+                </Stack>
+              </CardBody>
+              <CardFooter>
+                <Button colorScheme="green" rightIcon={<BiChevronDown />}>
+                  Stáhnout (.zip)
+                </Button>
+              </CardFooter>
+            </Card>
+          </WrapItem>
+
+          {/* KARTA PRO STÁHNUTÍ PLAKÁTŮ */}
+          <WrapItem>
+            <Card maxW="sm">
+              <CardBody>
+                <Image
+                  src="/img/Impuls HK black.png"
+                  borderRadius="lg"
+                  alt=""
+                />
+                <Stack mt="6" spacing="3">
+                  <Heading as="h3" size="md">
+                    Plakáty
+                  </Heading>
+                  <Text>
+                    This sofa is perfect for modern tropical spaces, baroque
+                    inspired spaces, earthy toned spaces and for people who love
+                    a chic design with a sprinkle of vintage design.
+                  </Text>
+                </Stack>
+              </CardBody>
+              <CardFooter>
+                <Button colorScheme="green" rightIcon={<BiChevronDown />}>
+                  Stáhnout (.zip)
+                </Button>
+              </CardFooter>
+            </Card>
+          </WrapItem>
+
+          {/* KARTA PRO STÁHNUTÍ PRESS-KITU */}
+          <WrapItem>
+            <Card maxW="sm">
+              <CardBody>
+                <Image
+                  src="/img/Impuls HK black.png"
+                  borderRadius="lg"
+                  alt=""
+                />
+                <Stack mt="6" spacing="3">
+                  <Heading as="h3" size="md">
+                    Press-kit
+                  </Heading>
+                  <Text>
+                    This sofa is perfect for modern tropical spaces, baroque
+                    inspired spaces, earthy toned spaces and for people who love
+                    a chic design with a sprinkle of vintage design.
+                  </Text>
+                </Stack>
+              </CardBody>
+              <CardFooter>
+                <Button colorScheme="green" rightIcon={<BiChevronDown />}>
+                  Stáhnout (.zip)
+                </Button>
+              </CardFooter>
+            </Card>
+          </WrapItem>
+        </Wrap>
+      </Section>
     </>
   );
 }
