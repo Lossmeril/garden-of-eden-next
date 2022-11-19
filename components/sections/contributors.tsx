@@ -7,6 +7,7 @@ import {
   Box,
   Text,
   Image,
+  HStack,
 } from "@chakra-ui/react";
 import Link from "next/link";
 import contributors from "../../datasets/contributors";
@@ -68,6 +69,26 @@ const ContributorsSection = () => {
             alt="Northumbria University v Newcastle upon Tyne"
             mx="auto"
           />
+        </Box>
+        <Box mx={{ base: 4, md: 12 }}>
+          <HStack mx="auto" gap={3}>
+            <Image
+              className="partner-logo"
+              src="/img/bab.webp"
+              alt="Obec Báb"
+            />
+            <Heading
+              as="p"
+              size="lg"
+              className="ordinary-font"
+              textTransform="uppercase"
+              lineHeight="1em"
+            >
+              Obec
+              <br />
+              Báb
+            </Heading>
+          </HStack>
         </Box>
       </Stack>
 
