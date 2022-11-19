@@ -57,27 +57,27 @@ const AboutSection = () => {
           <Heading as="h3" className="ordinary-font" mb={4} mt={6}>
             Synopse
           </Heading>
-          <Text>
+          <Text mb={4}>
             Před padesáti lety si pronajal Imrich pozemek na okraji Ústí nad
             Orlicí v zahrádkářské osadě. V té době ovšem pozemek nebyl ničím než
             kopřivami zarostlou bažinou. Pocházeje z jižního Slovenska, kde půda
             znamenala vše, Imrich věnoval většinu svého života zkultivování své
             zahrady, která se stala jeho láskou a náplní volného času.
           </Text>
-          <Text>
+          <Text mb={4}>
             Od jara do zimy, rok za rokem se o ni staral a vedl zahrádkářský
             výbor. Mezitím přišly děti, vnoučata a změna režimu. Po revoluci se
             však pozemek stal předmětem církevních restitucí a veškerá snaha o
             jeho odkoupení narazila na nepřátelský odpor. Imrich byl tímto
             rozhodnutím zdrcen, ale dodnes nadále aktivně pečuje o zahrádku.
           </Text>
-          <Text>
+          <Text mb={4}>
             Ve svém boji musí čelit stáří, počasí, škůdcům, vlastníkům půdy a
             zhoršujícímu se zdravotnímu stavu. Existuje šance, že se Imrich „na
             stará kolena“ vzdá zahrady a prodá ji, nebo se mu stane tento kus
             země osudným?
           </Text>
-          <Text>
+          <Text mb={4}>
             Dokumentární film nabízí intimní portrét stárnoucího člověka s
             láskou k přírodě, který se smiřiuje se svým věkem a ztrátou
             celoživotního díla. Mezitím vzpomíná s humorem na své mládí,
