@@ -11,12 +11,12 @@ const Animation = () => {
           alt="Imrich, protagonista filmu Zahrada Boží"
         />
         <Box className="aether" w="100%" h="100%">
-          <Image className="rotating" src="img/aether.png" alt="" />
+          <Image className="rotating" src="img/aether.webp" alt="" />
         </Box>
         <Box className="clock" w="100%" h="100%">
-          <Image className="rotating-slow" src="img/clock.png" alt="" />
+          <Image className="rotating-slow" src="img/clock.webp" alt="" />
         </Box>
-        <Image className="smoke pulsing" src="img/smoke.png" alt="" />
+        <Image className="smoke pulsing" src="img/smoke.webp" alt="" />
       </Box>
     </Box>
   );
