@@ -12,7 +12,7 @@ import { SiReact, SiGithub } from "react-icons/si";
 
 const Footer = () => {
   return (
-    <Box w="100%" bgColor="white" h="75px">
+    <Box w="100%" bgColor="white" h="75px" className="footer">
       <Center h="100%">
         <Container maxW="container.xl">
           <Stack direction={{ base: "column", md: "row" }} display="flex">
