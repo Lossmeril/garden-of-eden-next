@@ -13,6 +13,27 @@ import {
 import { BiChevronDown } from "react-icons/bi";
 import Section from "../section";
 
+const DownloadCard = ({ name, image, children }: any) => {
+  return (
+    <Card maxW="sm">
+      <CardBody>
+        <Image src={image} borderRadius="lg" alt="" />
+        <Stack mt="6" spacing="3">
+          <Heading as="h3" size="md" className="ordinary-font">
+            {name}
+          </Heading>
+          <Text>{children}</Text>
+        </Stack>
+      </CardBody>
+      <CardFooter>
+        <Button colorScheme="green" rightIcon={<BiChevronDown />}>
+          Stáhnout (.zip)
+        </Button>
+      </CardFooter>
+    </Card>
+  );
+};
+
 const DownloadsSection = () => {
   return (
     <Section anchor="press" heading="Ke stažení" bg="white">
@@ -25,74 +46,26 @@ const DownloadsSection = () => {
       >
         {/* KARTA PRO STÁHNUTÍ LOGA */}
         <WrapItem>
-          <Card maxW="sm">
-            <CardBody>
-              <Image src="/img/Impuls HK black.png" borderRadius="lg" alt="" />
-              <Stack mt="6" spacing="3">
-                <Heading as="h3" size="md">
-                  Logotyp
-                </Heading>
-                <Text>
-                  This sofa is perfect for modern tropical spaces, baroque
-                  inspired spaces, earthy toned spaces and for people who love a
-                  chic design with a sprinkle of vintage design.
-                </Text>
-              </Stack>
-            </CardBody>
-            <CardFooter>
-              <Button colorScheme="green" rightIcon={<BiChevronDown />}>
-                Stáhnout (.zip)
-              </Button>
-            </CardFooter>
-          </Card>
+          <DownloadCard name="Logotyp" image="/img/Impuls HK black.png">
+            O fortuna velut luna, statu variabilis, semper screscis aut
+            decrescis, vita detestabilis.
+          </DownloadCard>
         </WrapItem>
 
         {/* KARTA PRO STÁHNUTÍ PLAKÁTŮ */}
         <WrapItem>
-          <Card maxW="sm">
-            <CardBody>
-              <Image src="/img/Impuls HK black.png" borderRadius="lg" alt="" />
-              <Stack mt="6" spacing="3">
-                <Heading as="h3" size="md">
-                  Plakáty
-                </Heading>
-                <Text>
-                  This sofa is perfect for modern tropical spaces, baroque
-                  inspired spaces, earthy toned spaces and for people who love a
-                  chic design with a sprinkle of vintage design.
-                </Text>
-              </Stack>
-            </CardBody>
-            <CardFooter>
-              <Button colorScheme="green" rightIcon={<BiChevronDown />}>
-                Stáhnout (.zip)
-              </Button>
-            </CardFooter>
-          </Card>
+          <DownloadCard name="Plakáty" image="/img/Impuls HK black.png">
+            O fortuna velut luna, statu variabilis, semper screscis aut
+            decrescis, vita detestabilis.
+          </DownloadCard>
         </WrapItem>
 
         {/* KARTA PRO STÁHNUTÍ PRESS-KITU */}
         <WrapItem>
-          <Card maxW="sm">
-            <CardBody>
-              <Image src="/img/Impuls HK black.png" borderRadius="lg" alt="" />
-              <Stack mt="6" spacing="3">
-                <Heading as="h3" size="md">
-                  Press-kit
-                </Heading>
-                <Text>
-                  This sofa is perfect for modern tropical spaces, baroque
-                  inspired spaces, earthy toned spaces and for people who love a
-                  chic design with a sprinkle of vintage design.
-                </Text>
-              </Stack>
-            </CardBody>
-            <CardFooter>
-              <Button colorScheme="green" rightIcon={<BiChevronDown />}>
-                Stáhnout (.zip)
-              </Button>
-            </CardFooter>
-          </Card>
+          <DownloadCard name="Press-kit" image="/img/Impuls HK black.png">
+            O fortuna velut luna, statu variabilis, semper screscis aut
+            decrescis, vita detestabilis.
+          </DownloadCard>
         </WrapItem>
       </Wrap>
     </Section>
