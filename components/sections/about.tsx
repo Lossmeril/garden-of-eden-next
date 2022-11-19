@@ -1,24 +1,62 @@
-import { SimpleGrid, Heading, Box, Text } from "@chakra-ui/react";
+import {
+  SimpleGrid,
+  Heading,
+  Box,
+  Text,
+  VStack,
+  Avatar,
+  Card,
+  CardBody,
+  Grid,
+  GridItem,
+} from "@chakra-ui/react";
 import Section from "../section";
+
+const TeamMember = ({ name, image, role, children }: any) => {
+  return (
+    <Box w="100%" my={2}>
+      <Grid templateColumns="repeat(5, 1fr)" gap={6}>
+        <GridItem colSpan={1}>
+          <Avatar size="2xl" name={name} src={image} />
+        </GridItem>
+        <GridItem colSpan={4} w="100%" p={4}>
+          <Heading as="h4" size="md" className="ordinary-font">
+            {name}
+          </Heading>
+          <Heading as="p" size="sm" className="ordinary-font">
+            {role}
+          </Heading>
+          <Box mt={2}>{children}</Box>
+        </GridItem>
+      </Grid>
+    </Box>
+  );
+};
 
 const AboutSection = () => {
   return (
     <Section anchor="about" heading="O filmu" bg="white">
-      <SimpleGrid columns={2}>
-        <Box>
-          <Text>
-            &quot;To bylo už dávno. To jsem byl ještě mladý a krásný. Teď už
-            jsem jenom krásný...&quot;
-          </Text>
-          <Text>- Imrich Špitálský</Text>
-          <Heading as="h3">Treatment</Heading>
+      <Box className="center">
+        <Text>
+          &quot;To bylo už dávno. To jsem byl ještě mladý a krásný. Teď už jsem
+          jenom krásný...&quot;
+        </Text>
+        <Text>- Imrich Špitálský</Text>
+      </Box>
+      <SimpleGrid columns={2} gap={12}>
+        <Box p={12}>
+          <Heading as="h3" className="ordinary-font" mb={4} mt={6}>
+            Treatment
+          </Heading>
           <Text>
             Dokumentární snímek zachycující intimní portrét muže smiřujícího se
             se svým věkem a ztrátou celoživotního díla. Prožívající podzim svého
             života pečuje o svou zahradu, vtipkuje se svou ženou a vzpomíná na
             celoživotní cestu plnou lásky k přírodě, radosti, strastí a cibulí.
           </Text>
-          <Heading as="h3">Synopse</Heading>
+          <Heading as="h3" className="ordinary-font" mb={4} mt={6}>
+            Synopse
+          </Heading>
           <Text>
             Před padesáti lety si pronajal Imrich pozemek na okraji Ústí nad
             Orlicí v zahrádkářské osadě. V té době ovšem pozemek nebyl ničím než
@@ -47,11 +85,33 @@ const AboutSection = () => {
             vítězství, které mu půda a život dopřeje.
           </Text>
         </Box>
-        <Box>
-          <Heading as="h3">Tým</Heading>
-          <Heading as="h4">Michal Špitálský</Heading>
-          <Heading as="h4">Jakub Tesařík</Heading>
-          <Heading as="h4">Sam Enticknap</Heading>
+        <Box p={12}>
+          <Heading as="h3" className="ordinary-font" mb={4} mt={6}>
+            Tým
+          </Heading>
+          <VStack gap={4}>
+            <TeamMember
+              name="Michal Špitálský"
+              role="režisér"
+              image="/img/avatars/michal.webp"
+            >
+              <Text>Michal lorem ipsum dolor sit amet</Text>
+            </TeamMember>
+            <TeamMember
+              name="Jakub Tesařík"
+              role="produkce"
+              image="/img/avatars/jakub.webp"
+            >
+              <Text>Kuba lorem ipsum dolor sit amet</Text>
+            </TeamMember>
+            <TeamMember
+              name="Sam Enticknap"
+              role="hudba"
+              image="/img/avatars/sam.webp"
+            >
+              <Text>Sam lorem ipsum dolor sit amet</Text>
+            </TeamMember>
+          </VStack>
         </Box>
       </SimpleGrid>
     </Section>

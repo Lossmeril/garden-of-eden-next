@@ -96,7 +96,7 @@ const ContributorsSection = () => {
           >
             <Box p={2} w="100%" h="100%" position="relative">
               <Image
-                src="/img/plant.png"
+                src="/img/plant.webp"
                 alt=""
                 position="absolute"
                 width="50px"
@@ -126,7 +126,7 @@ const ContributorsSection = () => {
         <WrapItem h="80px">
           <Box p={5} w="100%" h="100%" position="relative">
             <Image
-              src="/img/sad-little-cup.png"
+              src="/img/sad-little-cup.webp"
               alt=""
               position="absolute"
               width="50px"
