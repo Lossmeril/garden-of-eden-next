@@ -8,6 +8,7 @@ import {
   Image,
   SimpleGrid,
   Stack,
+  VisuallyHidden,
   VStack,
 } from "@chakra-ui/react";
 
@@ -37,21 +38,37 @@ export default function Home() {
       </Head>
 
       <Box className="header-section" h="100vh">
-        <SimpleGrid columns={{ base: 1, lg: 2 }} h="100vh">
-          <Box h="100%" overflow="hidden" position="relative">
-            <Box className="headings">
-              <VStack gap={8}>
-                <Image src="/img/logo-cz.png" alt="Zahrada Boží" width="50%" />
-                <Heading as="h1" display="none">
-                  Zahrada Boží
-                </Heading>
-                <Heading as="p" color="white">
+        <SimpleGrid
+          columns={{ base: 1, lg: 2 }}
+          h="100vh"
+          pt={{ base: 6, lg: 0 }}
+        >
+          <Box
+            h="100%"
+            overflow={{ base: "visible", md: "hidden" }}
+            position="relative"
+          >
+            <Box className="headings" pt={12} mt={4}>
+              <VStack gap={{ base: 2, md: 4, xl: 8 }}>
+                <Image
+                  src="/img/logo-cz.png"
+                  alt="Zahrada Boží"
+                  width={{ base: "50%", lg: "50%" }}
+                />
+                <VisuallyHidden>
+                  <Heading as="h1">Zahrada Boží</Heading>
+                </VisuallyHidden>
+                <Heading
+                  as="p"
+                  color="white"
+                  size={{ base: "md", md: "lg", lg: "xl" }}
+                >
                   dokumentární film
                 </Heading>
 
                 <Stack direction={{ base: "column", xl: "row" }}>
                   <Button
-                    size="lg"
+                    size={{ base: "md", md: "lg" }}
                     colorScheme="green"
                     leftIcon={<IoHeartCircleOutline />}
                     rightIcon={<RiArrowRightSFill />}
@@ -61,7 +78,8 @@ export default function Home() {
 
                   <Link href="#about">
                     <Button
-                      size="lg"
+                      size={{ base: "md", md: "lg" }}
+                      w={{ base: "100%", xl: "auto" }}
                       leftIcon={<IoMdFilm />}
                       rightIcon={<RiArrowRightSFill />}
                     >
