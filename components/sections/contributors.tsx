@@ -71,7 +71,7 @@ const ContributorsSection = () => {
           />
         </Box>
         <Box mx={{ base: 4, md: 12 }}>
-          <HStack mx="auto" gap={3}>
+          <HStack gap={3} justify="center">
             <Image
               className="partner-logo"
               src="/img/bab.webp"
@@ -125,7 +125,7 @@ const ContributorsSection = () => {
                 top="10px"
                 left="-20px"
                 transform={
-                  "rotate(" + Math.floor(Math.random() * (20 + 1) - 10) + "deg)"
+                  "rotate(" + Math.floor(Math.random() * (40 + 1) - 20) + "deg)"
                 }
               />
               <Center w="100%" h="100%">
