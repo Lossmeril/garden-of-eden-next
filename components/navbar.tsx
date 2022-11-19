@@ -6,6 +6,7 @@ import {
   Spacer,
   Button,
   Center,
+  Text,
 } from "@chakra-ui/react";
 import React from "react";
 import NextLink from "next/link";
@@ -15,9 +16,9 @@ import { RiArrowRightSFill } from "react-icons/ri";
 const NavbarItem = ({ link, target, children }: any) => {
   return (
     <NextLink href={link} target={target}>
-      <Link fontSize={{ base: "12px", md: "20px" }} mr={12}>
+      <Text fontSize={{ base: "12px", md: "20px" }} mr={12}>
         {children}
-      </Link>
+      </Text>
     </NextLink>
   );
 };
