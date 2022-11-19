@@ -15,7 +15,13 @@ import Section from "../section";
 const ContributorsSection = () => {
   return (
     <Section anchor="donations" heading="Projekt podporují" bg="white">
-      <Heading as="h3" size="lg" mt="4rem" mb={6}>
+      <Heading
+        as="h3"
+        size="lg"
+        mt="4rem"
+        mb={6}
+        className="center ordinary-font"
+      >
         Generální partner
       </Heading>
       <Center>
@@ -32,7 +38,13 @@ const ContributorsSection = () => {
         </Link>
       </Center>
 
-      <Heading as="h3" size="lg" mt="5rem" mb={6}>
+      <Heading
+        as="h3"
+        size="lg"
+        mt="5rem"
+        mb={6}
+        className="center ordinary-font"
+      >
         Za podpory
       </Heading>
       <Stack
@@ -59,7 +71,13 @@ const ContributorsSection = () => {
         </Box>
       </Stack>
 
-      <Heading as="h3" size="lg" mt="5rem" mb={6}>
+      <Heading
+        as="h3"
+        size="lg"
+        mt="5rem"
+        mb={6}
+        className="center ordinary-font"
+      >
         Skrze HitHit přispěli
       </Heading>
 

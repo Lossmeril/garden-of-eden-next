@@ -4,8 +4,16 @@
 }
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap');
 
-h3 {
+.center {
+  text-align: center;
+}
+
+.ordinary-font {
   font-family: "Space Grotesk", Arial, Helvetica, sans-serif !important;
+}
+
+.decorative-font {
+  font-family: "kawoszeh", Arial, Helvetica, sans-serif !important;
 }
 
 main {
@@ -163,11 +171,7 @@ main {
   }
 }
 
-.section {
-  h2, h3, h4 {
-      text-align: center;
-  }
-}
+
 
 .contributor-wrap {
 width: 90%;

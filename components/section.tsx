@@ -12,7 +12,7 @@ const Section = ({ anchor, heading, bg, color, children }: any) => {
       bg={bg ? bg : "transparent"}
       color={color ? color : "black"}
     >
-      <Heading my={10} size="4xl">
+      <Heading my={10} size="4xl" className="center">
         {heading}
       </Heading>
       {children}
