@@ -1,12 +1,15 @@
-import React from "react";
+import React, { Suspense } from "react";
 import Head from "next/head";
 import Link from "next/link";
+import dynamic from "next/dynamic";
 import {
   Box,
   Button,
+  Center,
   Heading,
   Image,
   SimpleGrid,
+  Spinner,
   Stack,
   VisuallyHidden,
   VStack,
@@ -26,7 +29,9 @@ import ContributorsSection from "../components/sections/contributors";
 import ContactsSection from "../components/sections/contacts";
 import DownloadsSection from "../components/sections/downloads";
 
-/*IMPORT SECTIONS*/
+const LazyAnimation = dynamic(() => import("../components/animation"), {
+  suspense: true,
+});
 
 export default function Home() {
   return (
@@ -91,7 +96,21 @@ export default function Home() {
             </Box>
           </Box>
           <Box position="relative">
-            <Animation />
+            <Suspense
+              fallback={
+                <Center w="100%" h="100%">
+                  <Spinner
+                    thickness="4px"
+                    speed="0.65s"
+                    emptyColor="whiteAlpha.800"
+                    color="green.500"
+                    size="xl"
+                  />
+                </Center>
+              }
+            >
+              <LazyAnimation />
+            </Suspense>
           </Box>
         </SimpleGrid>
       </Box>
