@@ -1,11 +1,7 @@
+import LiteYouTubeEmbed from "react-lite-youtube-embed";
+
 const YouTubeTrailer = () => {
-  return (
-    <iframe
-      title="Zahrada Boží Trailer"
-      src="https://www.youtube.com/embed/5LBdLa9f_zI"
-      allowFullScreen
-    />
-  );
+  return <LiteYouTubeEmbed id="5LBdLa9f_zI" title="Zahrada Boží Trailer" />;
 };
 
 export default YouTubeTrailer;
