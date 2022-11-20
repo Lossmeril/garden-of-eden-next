@@ -1,5 +1,6 @@
 import * as React from "react";
-import { Box, Image } from "@chakra-ui/react";
+import { Box } from "@chakra-ui/react";
+import Image from "next/image";
 
 const Animation = () => {
   return (
@@ -7,16 +8,32 @@ const Animation = () => {
       <Box className="elements">
         <Image
           className="imrich"
-          src="img/imrich.webp"
+          src="/img/imrich.webp"
           alt="Imrich, protagonista filmu Zahrada Boží"
+          width={637}
+          height={845}
         />
         <Box className="aether" w="100%" h="100%">
-          <Image className="rotating" src="img/aether.webp" alt="" />
+          <Image
+            className="rotating"
+            src="/img/aether.webp"
+            alt=""
+            width={933}
+            height={933}
+          />
         </Box>
         <Box className="clock" w="100%" h="100%">
-          <Image className="rotating-slow" src="img/clock.webp" alt="" />
+          <Image
+            className="rotating-slow"
+            src="/img/clock.webp"
+            alt=""
+            width={933}
+            height={933}
+          />
         </Box>
-        <Image className="smoke pulsing" src="img/smoke.webp" alt="" />
+        <Box className="smoke">
+          <Image src="/img/smoke.webp" alt="" width={933} height={933} />
+        </Box>
       </Box>
     </Box>
   );

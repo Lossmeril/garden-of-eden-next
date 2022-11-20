@@ -15,11 +15,11 @@ import Section from "../section";
 const TeamMember = ({ name, image, role, children }: any) => {
   return (
     <Box w="100%" my={2}>
-      <Grid templateColumns="repeat(5, 1fr)" gap={6}>
-        <GridItem colSpan={1}>
-          <Avatar size="2xl" name={name} src={image} />
+      <Grid templateColumns="repeat(5, 1fr)" gap={{ base: 2, md: 6 }}>
+        <GridItem colSpan={{ base: 5, md: 1 }}>
+          <Avatar size={{ base: "xl", md: "2xl" }} name={name} src={image} />
         </GridItem>
-        <GridItem colSpan={4} w="100%" p={4}>
+        <GridItem colSpan={{ base: 5, md: 4 }} w="100%" p={4}>
           <Heading as="h4" size="md" className="ordinary-font">
             {name}
           </Heading>
@@ -44,7 +44,7 @@ const AboutSection = () => {
         <Text>- Imrich Špitálský</Text>
       </Box>
       <SimpleGrid columns={{ base: 1, xl: 2 }} gap={{ base: 4, xl: 12 }}>
-        <Box p={{ base: 4, xl: 12 }}>
+        <Box p={{ base: 4, xl: 12 }} textAlign={{ base: "center", md: "left" }}>
           <Heading as="h3" className="ordinary-font" mb={4} mt={6}>
             Treatment
           </Heading>
@@ -77,7 +77,7 @@ const AboutSection = () => {
             stará kolena“ vzdá zahrady a prodá ji, nebo se mu stane tento kus
             země osudným?
           </Text>
-          <Text mb={4}>
+          <Text>
             Dokumentární film nabízí intimní portrét stárnoucího člověka s
             láskou k přírodě, který se smiřiuje se svým věkem a ztrátou
             celoživotního díla. Mezitím vzpomíná s humorem na své mládí,
@@ -85,8 +85,13 @@ const AboutSection = () => {
             vítězství, které mu půda a život dopřeje.
           </Text>
         </Box>
-        <Box p={12}>
-          <Heading as="h3" className="ordinary-font" mb={4} mt={6}>
+        <Box p={{ base: 4, xl: 12 }} textAlign={{ base: "center", md: "left" }}>
+          <Heading
+            as="h3"
+            className="ordinary-font"
+            mb={4}
+            mt={{ base: 0, md: 6 }}
+          >
             Tým
           </Heading>
           <VStack gap={4}>
@@ -100,7 +105,7 @@ const AboutSection = () => {
             <TeamMember
               name="Jakub Tesařík"
               role="produkce"
-              image="/img/avatars/jakub.webp"
+              // image="/img/avatars/jakub.webp"
             >
               <Text>Kuba lorem ipsum dolor sit amet</Text>
             </TeamMember>

@@ -4,11 +4,11 @@ import { Box, Heading } from "@chakra-ui/react";
 const Section = ({ anchor, heading, bg, color, children }: any) => {
   return (
     <Box
-      minH="100vh"
+      minH={{ base: "50vh", md: "100vh" }}
       className="section"
       id={anchor}
       py={12}
-      px={{ base: 0, sm: 4, md: 8, lg: 12 }}
+      px={{ base: 3, sm: 4, md: 8, lg: 12 }}
       bg={bg ? bg : "transparent"}
       color={color ? color : "black"}
     >

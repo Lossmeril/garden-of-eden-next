@@ -2,6 +2,8 @@ import React, { Suspense } from "react";
 import Head from "next/head";
 import Link from "next/link";
 import dynamic from "next/dynamic";
+import NextImage from "next/image";
+
 import {
   Box,
   Button,
@@ -14,10 +16,6 @@ import {
   VisuallyHidden,
   VStack,
 } from "@chakra-ui/react";
-
-/*IMPORT CUSTOM COMPONENTS*/
-import Section from "../components/section";
-import Animation from "../components/animation";
 
 /*IMPORT ICONS*/
 import { IoMdFilm } from "react-icons/io";
@@ -39,26 +37,30 @@ export default function Home() {
       <Head>
         <title>Zahrada Boží - dokumentární film</title>
         <meta name="description" content="" />
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1.0"
+        ></meta>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <Box className="header-section" h="100vh">
         <SimpleGrid
-          columns={{ base: 1, lg: 2 }}
+          columns={{ base: 1, md: 2 }}
           h="100vh"
           pt={{ base: 6, lg: 0 }}
         >
           <Box
             h="100%"
-            overflow={{ base: "visible", md: "hidden" }}
+            overflow={{ base: "visible", xl: "hidden" }}
             position="relative"
           >
-            <Box className="headings" pt={12} mt={4}>
-              <VStack gap={{ base: 2, md: 4, xl: 8 }}>
+            <Box className="headings" pt={12} mt={4} overflow="visible">
+              <VStack gap={{ base: 2, md: 4, xl: 8 }} overflow="visible">
                 <Image
                   src="/img/logo-cz.png"
                   alt="Zahrada Boží"
-                  width={{ base: "50%", lg: "50%" }}
+                  width={{ base: "50%", sm: "45%", md: "75%", lg: "50%" }}
                 />
                 <VisuallyHidden>
                   <Heading as="h1">Zahrada Boží</Heading>
@@ -71,9 +73,15 @@ export default function Home() {
                   dokumentární film
                 </Heading>
 
-                <Stack direction={{ base: "column", xl: "row" }}>
+                <Stack
+                  direction={{
+                    base: "column",
+                    lg: "column",
+                    xl: "row",
+                  }}
+                >
                   <Button
-                    size={{ base: "md", md: "lg" }}
+                    size={{ base: "md", lg: "lg" }}
                     colorScheme="green"
                     leftIcon={<IoHeartCircleOutline />}
                     rightIcon={<RiArrowRightSFill />}
@@ -83,7 +91,7 @@ export default function Home() {
 
                   <Link href="#about">
                     <Button
-                      size={{ base: "md", md: "lg" }}
+                      size={{ base: "md", lg: "lg" }}
                       w={{ base: "100%", xl: "auto" }}
                       leftIcon={<IoMdFilm />}
                       rightIcon={<RiArrowRightSFill />}

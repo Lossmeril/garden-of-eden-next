@@ -16,6 +16,9 @@
   font-family: "kawoszeh", Arial, Helvetica, sans-serif !important;
 }
 
+
+
+
 main {
   background-image: url("/img/bg.webp");
   background-repeat: no-repeat;
@@ -150,8 +153,22 @@ main {
   transform: translate(-50%, -50%);
   z-index: 2;
   width: 100%;
+  max-width: 1000px;
   height: 100%;
+  max-height: 1000px;;
   mix-blend-mode: multiply;
+
+  @media (min-width: 3000px) and (min-height: 1080px) {
+    transform: scale(2.2) translate(-30%, -10%);  
+  }
+
+  @media (min-width: 30em) and (max-width: 62em) {
+    transform: translate(-50%, -40%);  
+  }
+
+    @media (min-width: 30em) and (max-width: 62em) and (min-height: 50em) {
+    transform: translate(-50%, -30%);  
+  }
 
   .elements {
       position: relative;
@@ -161,11 +178,15 @@ main {
       .imrich {
           position: absolute;
           height: 90%;
-          object-fit: cover;
+          object-fit: contain;
           bottom: 0;
           left: 50%;
-          transform: translate(-50%, 0%);
+          transform: translate(-50%, 10%);
           z-index: 6;
+
+          @media (min-width: 1920px) {
+            transform: translate(-55%, 0%);
+          }
       }
 
       .aether {
@@ -175,6 +196,8 @@ main {
           left: 50%;
           transform: translate(-50%, 0%) scale(1.35);
           z-index: 5;
+
+          
       }
 
       .clock {
@@ -192,9 +215,10 @@ main {
           object-fit: contain;
           bottom: -10%;
           left: 50%;
-          transform: translate(-50%, 0%) scale(1.55);
+          transform: translate(-50%, 70%) scale(3);
           z-index: 3;
           mix-blend-mode: multiply;
+
       }
   }
 }

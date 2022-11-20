@@ -15,7 +15,7 @@ import Section from "../section";
 
 const DownloadCard = ({ name, image, children }: any) => {
   return (
-    <Card maxW="sm">
+    <Card mx={{ base: 6, sm: 0 }}>
       <CardBody>
         <Image src={image} borderRadius="lg" alt="" />
         <Stack mt="6" spacing="3">
@@ -39,13 +39,13 @@ const DownloadsSection = () => {
     <Section anchor="press" heading="Ke stažení" bg="white">
       <Wrap
         align="center"
-        spacing={8}
+        spacing={{ base: 2, sm: 8 }}
         justify="center"
         py={5}
         className="downloads-wrap"
       >
         {/* KARTA PRO STÁHNUTÍ LOGA */}
-        <WrapItem>
+        <WrapItem w={{ base: "100%", sm: "45%", md: "30%" }}>
           <DownloadCard name="Logotyp" image="/img/Impuls HK black.png">
             O fortuna velut luna, statu variabilis, semper screscis aut
             decrescis, vita detestabilis.
@@ -53,7 +53,7 @@ const DownloadsSection = () => {
         </WrapItem>
 
         {/* KARTA PRO STÁHNUTÍ PLAKÁTŮ */}
-        <WrapItem>
+        <WrapItem w={{ base: "100%", sm: "45%", md: "30%" }}>
           <DownloadCard name="Plakáty" image="/img/Impuls HK black.png">
             O fortuna velut luna, statu variabilis, semper screscis aut
             decrescis, vita detestabilis.
@@ -61,7 +61,7 @@ const DownloadsSection = () => {
         </WrapItem>
 
         {/* KARTA PRO STÁHNUTÍ PRESS-KITU */}
-        <WrapItem>
+        <WrapItem w={{ base: "100%", sm: "45%", md: "30%" }}>
           <DownloadCard name="Press-kit" image="/img/Impuls HK black.png">
             O fortuna velut luna, statu variabilis, semper screscis aut
             decrescis, vita detestabilis.

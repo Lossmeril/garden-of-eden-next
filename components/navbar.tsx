@@ -23,7 +23,10 @@ const NavbarItem = ({ link, target, children, mobile }: any) => {
   if (!mobile) {
     return (
       <NextLink href={link} target={target}>
-        <Text fontSize={{ base: "12px", md: "20px" }} mr={12}>
+        <Text
+          fontSize={{ base: "md", lg: "lg", xl: "xl" }}
+          mr={{ base: 4, xl: 12 }}
+        >
           {children}
         </Text>
       </NextLink>

@@ -1,4 +1,4 @@
-import { AspectRatio, Box, Spinner } from "@chakra-ui/react";
+import { AspectRatio, Box, Center, Spinner } from "@chakra-ui/react";
 import dynamic from "next/dynamic";
 import { Suspense } from "react";
 import Section from "../section";
