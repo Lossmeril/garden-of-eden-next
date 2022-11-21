@@ -37,7 +37,7 @@ const AboutSection = () => {
   return (
     <Section anchor="about" heading="O filmu" bg="white">
       <Box className="center">
-        <Text>
+        <Text fontSize="xl">
           &quot;To bylo už dávno. To jsem byl ještě mladý a krásný. Teď už jsem
           jenom krásný...&quot;
         </Text>
