@@ -107,6 +107,7 @@ const ContributorsSection = () => {
         align="center"
         spacing={0}
         justify="center"
+        mb={10}
       >
         {contributors.map((contributor) => (
           <WrapItem

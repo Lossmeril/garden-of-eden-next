@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Box, Heading } from "@chakra-ui/react";
+import { Box, Center, Heading } from "@chakra-ui/react";
 
 const Section = ({ anchor, heading, bg, color, children }: any) => {
   return (
@@ -11,6 +11,7 @@ const Section = ({ anchor, heading, bg, color, children }: any) => {
       px={{ base: 3, sm: 4, md: 8, lg: 12 }}
       bg={bg ? bg : "transparent"}
       color={color ? color : "black"}
+      justifyContent="center"
     >
       <Heading my={10} size="4xl" className="center">
         {heading}
