@@ -5,8 +5,6 @@ import {
   Text,
   VStack,
   Avatar,
-  Card,
-  CardBody,
   Grid,
   GridItem,
 } from "@chakra-ui/react";
@@ -14,12 +12,16 @@ import Section from "../section";
 
 const TeamMember = ({ name, image, role, children }: any) => {
   return (
-    <Box w="100%" my={2}>
-      <Grid templateColumns="repeat(5, 1fr)" gap={{ base: 2, md: 6 }}>
+    <Box w="100%">
+      <Grid
+        templateColumns="repeat(5, 1fr)"
+        gap={{ base: 2, md: 6 }}
+        alignItems="center"
+      >
         <GridItem colSpan={{ base: 5, md: 1 }}>
           <Avatar size={{ base: "xl", md: "2xl" }} name={name} src={image} />
         </GridItem>
-        <GridItem colSpan={{ base: 5, md: 4 }} w="100%" p={4}>
+        <GridItem colSpan={{ base: 5, md: 4 }} w="100%" px={4}>
           <Heading as="h4" size="md" className="ordinary-font">
             {name}
           </Heading>
@@ -43,7 +45,11 @@ const AboutSection = () => {
         </Text>
         <Text>- Imrich Špitálský</Text>
       </Box>
-      <SimpleGrid columns={{ base: 1, xl: 2 }} gap={{ base: 4, xl: 12 }}>
+      <SimpleGrid
+        columns={{ base: 1, xl: 2 }}
+        gap={{ base: 4, xl: 12 }}
+        px={12}
+      >
         <Box p={{ base: 4, xl: 12 }} textAlign={{ base: "center", md: "left" }}>
           <Heading as="h3" className="ordinary-font" mb={4} mt={6}>
             Treatment
@@ -94,27 +100,41 @@ const AboutSection = () => {
           >
             Tým
           </Heading>
-          <VStack gap={4}>
+          <VStack gap={12}>
             <TeamMember
               name="Michal Špitálský"
               role="režisér"
               image="/img/avatars/michal.webp"
             >
-              <Text>Michal lorem ipsum dolor sit amet</Text>
+              <Text>
+                Michal je studentem oboru Film and TV Production na
+                Northumbrijské univerzitě a s příběhem byl od samého začátku a
+                měl šanci pozorovat Imricha v dobrém i zlém. Michal je v týmu
+                ten &quot;kreativní&quot;.
+              </Text>
             </TeamMember>
             <TeamMember
               name="Jakub Tesařík"
               role="produkce"
-              // image="/img/avatars/jakub.webp"
+              image="/img/avatars/jakub.webp"
             >
-              <Text>Kuba lorem ipsum dolor sit amet</Text>
+              <Text>
+                Jakub studuje Management v kreativním průmyslu na VŠKK a s
+                Michalem pracuje už nějaký ten pátek. Jeho profesní zaměření mu
+                umožňuje být komunikační a organizační složkou týmu.
+              </Text>
             </TeamMember>
             <TeamMember
               name="Sam Enticknap"
               role="hudba"
               image="/img/avatars/sam.webp"
             >
-              <Text>Sam lorem ipsum dolor sit amet</Text>
+              <Text>
+                Sam vystudoval obor Film Music na konzervatoři v Yorku a k
+                projektu se dostal úplnou náhodou. I přesto se s nadšením vrhnul
+                do skládání, aby za pomoci originální hudby vhodně dokreslil
+                atmosféru.
+              </Text>
             </TeamMember>
           </VStack>
         </Box>
