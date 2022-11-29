@@ -90,7 +90,12 @@ const Navbar = ({ dataActive }: any) => {
           my={4}
           mx={12}
         >
-          <Image src="/img/logo-cz.png" alt="Zahrada Boží" h="50px" />
+          <Image
+            src="/img/logos/cz_black.png"
+            alt="Zahrada Boží"
+            h="50px"
+            style={{ transform: "scale(1.5)" }}
+          />
           <Spacer />
           <Center height="100%">
             <NavbarItem link="/">Domů</NavbarItem>

@@ -5,16 +5,17 @@ import {
   CardBody,
   Stack,
   Heading,
-  Text,
   Avatar,
-  StackDivider,
   VStack,
   Square,
   Box,
   HStack,
-  Spacer,
 } from "@chakra-ui/react";
 import Section from "../section";
+
+import { RiPhoneFill } from "react-icons/ri";
+import { IoMailSharp } from "react-icons/io5";
+import { SiLinkedin } from "react-icons/si";
 
 const ContactCard = ({ name, image, role, children }: any) => {
   return (
@@ -54,30 +55,24 @@ const ContactsSection = () => {
             <VStack mt={6} gap={3} align="left" w="50%" mx="auto">
               <Box>
                 <HStack>
-                  <Square
-                    size="40px"
-                    bg="green.500"
-                    color="white"
-                    mr={3}
-                  ></Square>
+                  <Square size="40px" bg="green.500" color="white" mr={3}>
+                    <RiPhoneFill />
+                  </Square>
                   <Heading
                     as="p"
                     className="ordinary-font"
                     size="sm"
                     fontWeight="normal"
                   >
-                    +420 XXX XXX XXX
+                    +420 724 797 522
                   </Heading>
                 </HStack>
               </Box>
               <Box>
                 <HStack>
-                  <Square
-                    size="40px"
-                    bg="green.500"
-                    color="white"
-                    mr={3}
-                  ></Square>
+                  <Square size="40px" bg="green.500" color="white" mr={3}>
+                    <IoMailSharp />
+                  </Square>
                   <Heading
                     as="p"
                     className="ordinary-font"
@@ -90,12 +85,9 @@ const ContactsSection = () => {
               </Box>
               <Box>
                 <HStack>
-                  <Square
-                    size="40px"
-                    bg="green.500"
-                    color="white"
-                    mr={3}
-                  ></Square>
+                  <Square size="40px" bg="green.500" color="white" mr={3}>
+                    <SiLinkedin />
+                  </Square>
                   <Heading
                     as="p"
                     className="ordinary-font"

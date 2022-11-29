@@ -58,7 +58,7 @@ export default function Home() {
             <Box className="headings" pt={12} mt={4} overflow="visible">
               <VStack gap={{ base: 2, md: 4, xl: 8 }} overflow="visible">
                 <Image
-                  src="/img/logo-cz.png"
+                  src="/img/logos/cz_white.png"
                   alt="Zahrada Boží"
                   width={{ base: "50%", sm: "45%", md: "75%", lg: "50%" }}
                 />
