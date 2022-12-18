@@ -115,7 +115,7 @@ const AboutSection = () => {
             </TeamMember>
             <TeamMember
               name="Jakub Tesařík"
-              role="produkce"
+              role="producent"
               image="/img/avatars/jakub.webp"
             >
               <Text>

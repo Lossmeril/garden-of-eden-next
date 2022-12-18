@@ -16,6 +16,7 @@ import Section from "../section";
 import { RiPhoneFill } from "react-icons/ri";
 import { IoMailSharp } from "react-icons/io5";
 import { SiLinkedin } from "react-icons/si";
+import Link from "next/link";
 
 const ContactCard = ({ name, image, role, children }: any) => {
   return (
@@ -54,49 +55,58 @@ const ContactsSection = () => {
           >
             <VStack mt={6} gap={3} align="left" w="50%" mx="auto">
               <Box>
-                <HStack>
-                  <Square size="40px" bg="green.500" color="white" mr={3}>
-                    <RiPhoneFill />
-                  </Square>
-                  <Heading
-                    as="p"
-                    className="ordinary-font"
-                    size="sm"
-                    fontWeight="normal"
-                  >
-                    +420 724 797 522
-                  </Heading>
-                </HStack>
+                <a href="tel:'+420724797522'">
+                  <HStack>
+                    <Square size="40px" bg="green.500" color="white" mr={3}>
+                      <RiPhoneFill />
+                    </Square>
+                    <Heading
+                      as="p"
+                      className="ordinary-font"
+                      size="sm"
+                      fontWeight="normal"
+                    >
+                      +420 724 797 522
+                    </Heading>
+                  </HStack>
+                </a>
               </Box>
               <Box>
-                <HStack>
-                  <Square size="40px" bg="green.500" color="white" mr={3}>
-                    <IoMailSharp />
-                  </Square>
-                  <Heading
-                    as="p"
-                    className="ordinary-font"
-                    size="sm"
-                    fontWeight="normal"
-                  >
-                    jakub@tesarik.art
-                  </Heading>
-                </HStack>
+                <a href="mailto:'jakub@tesarik.art'">
+                  <HStack>
+                    <Square size="40px" bg="green.500" color="white" mr={3}>
+                      <IoMailSharp />
+                    </Square>
+                    <Heading
+                      as="p"
+                      className="ordinary-font"
+                      size="sm"
+                      fontWeight="normal"
+                    >
+                      jakub@tesarik.art
+                    </Heading>
+                  </HStack>
+                </a>
               </Box>
               <Box>
-                <HStack>
-                  <Square size="40px" bg="green.500" color="white" mr={3}>
-                    <SiLinkedin />
-                  </Square>
-                  <Heading
-                    as="p"
-                    className="ordinary-font"
-                    size="sm"
-                    fontWeight="normal"
-                  >
-                    {"/tesarik-jakub"}
-                  </Heading>
-                </HStack>
+                <Link
+                  href="https://www.linkedin.com/in/tesarik-jakub/"
+                  target="_blank"
+                >
+                  <HStack>
+                    <Square size="40px" bg="green.500" color="white" mr={3}>
+                      <SiLinkedin />
+                    </Square>
+                    <Heading
+                      as="p"
+                      className="ordinary-font"
+                      size="sm"
+                      fontWeight="normal"
+                    >
+                      {"/tesarik-jakub"}
+                    </Heading>
+                  </HStack>
+                </Link>
               </Box>
             </VStack>
           </ContactCard>

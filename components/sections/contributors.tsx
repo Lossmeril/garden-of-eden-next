@@ -23,7 +23,7 @@ const ContributorsSection = () => {
         mb={6}
         className="center ordinary-font"
       >
-        Generální partner
+        Generální partneři
       </Heading>
       <Center>
         <Link href="">
@@ -37,6 +37,14 @@ const ContributorsSection = () => {
             <Text textAlign="center">Vaše logo, nebo jméno může být tady!</Text>
           </Box>
         </Link>
+        <Box mx={{ base: 4, md: 12 }}>
+          <Image
+            className="partner-logo"
+            src="/img/Impuls HK black.png"
+            alt="Centrum uměleckých aktivit Impuls Hradec Králové"
+            mx="auto"
+          />
+        </Box>
       </Center>
 
       <Heading
@@ -54,14 +62,6 @@ const ContributorsSection = () => {
         spacing={12}
         justify="center"
       >
-        <Box mx={{ base: 4, md: 12 }}>
-          <Image
-            className="partner-logo"
-            src="/img/Impuls HK black.png"
-            alt="Centrum uměleckých aktivit Impuls Hradec Králové"
-            mx="auto"
-          />
-        </Box>
         <Box mx={{ base: 4, md: 12 }}>
           <Image
             className="partner-logo"
@@ -96,7 +96,7 @@ const ContributorsSection = () => {
         as="h3"
         size="lg"
         mt="5rem"
-        mb={6}
+        mb={4}
         className="center ordinary-font"
       >
         Skrze HitHit přispěli
