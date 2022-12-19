@@ -25,18 +25,12 @@ const ContributorsSection = () => {
       >
         Generální partneři
       </Heading>
-      <Center>
-        <Link href="">
-          <Box
-            px={5}
-            py={10}
-            borderRadius="1rem"
-            w={{ base: "100%", md: "100%" }}
-            bg="green.100"
-          >
-            <Text textAlign="center">Vaše logo, nebo jméno může být tady!</Text>
-          </Box>
-        </Link>
+      <Stack
+        direction={{ base: "column", md: "row" }}
+        justify="center"
+        w={{ base: "100%", md: "100%" }}
+        spacing={12}
+      >
         <Box mx={{ base: 4, md: 12 }}>
           <Image
             className="partner-logo"
@@ -45,7 +39,19 @@ const ContributorsSection = () => {
             mx="auto"
           />
         </Box>
-      </Center>
+        <Link href="">
+          <Box
+            px={5}
+            py={10}
+            borderRadius="1rem"
+            w={{ base: "auto", md: "100%" }}
+            mx={{ base: 12, md: 0 }}
+            bg="green.100"
+          >
+            <Text textAlign="center">Vaše logo, nebo jméno může být tady!</Text>
+          </Box>
+        </Link>
+      </Stack>
 
       <Heading
         as="h3"
@@ -70,7 +76,7 @@ const ContributorsSection = () => {
             mx="auto"
           />
         </Box>
-        <Box mx={{ base: 4, md: 12 }}>
+        {/* <Box mx={{ base: 4, md: 12 }}>
           <HStack gap={3} justify="center">
             <Image
               className="partner-logo"
@@ -89,7 +95,7 @@ const ContributorsSection = () => {
               Báb
             </Heading>
           </HStack>
-        </Box>
+        </Box> */}
       </Stack>
 
       <Heading

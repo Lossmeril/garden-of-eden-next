@@ -123,7 +123,7 @@ const Navbar = ({ dataActive }: any) => {
           px={6}
           display={{ base: "flex", lg: "none" }}
         >
-          <Image src="/img/logo-cz.png" alt="Zahrada Boží" h="40px" />
+          <Image src="/img/logos/cz_black.png" alt="Zahrada Boží" h="50px" />
           <Spacer />
           <Box
             ml={2}

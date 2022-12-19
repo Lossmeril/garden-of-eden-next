@@ -48,7 +48,7 @@ const AboutSection = () => {
       <SimpleGrid
         columns={{ base: 1, xl: 2 }}
         gap={{ base: 4, xl: 12 }}
-        px={12}
+        px={{ base: 4, xl: 12 }}
       >
         <Box p={{ base: 4, xl: 12 }} textAlign={{ base: "center", md: "left" }}>
           <Heading as="h3" className="ordinary-font" mb={4} mt={6}>

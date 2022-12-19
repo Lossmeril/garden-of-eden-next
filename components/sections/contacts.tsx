@@ -42,18 +42,24 @@ const ContactsSection = () => {
     <Section anchor="contacts" heading="Kontakty">
       <Wrap
         align="center"
-        spacing={{ base: 2, sm: 8 }}
+        spacing={{ base: 2, lg: 8 }}
         justify="center"
         py={5}
         className="downloads-wrap"
       >
-        <WrapItem w={{ base: "100%", sm: "45%", md: "30%" }}>
+        <WrapItem w={{ base: "100%", sm: "75%", lg: "50%", xl: "30%" }}>
           <ContactCard
             name="Jakub Tesařík"
             image="/img/avatars/jakub.webp"
             role="producent"
           >
-            <VStack mt={6} gap={3} align="left" w="50%" mx="auto">
+            <VStack
+              mt={6}
+              gap={3}
+              align="left"
+              w={{ base: "100%", md: "75%", lg: "50%" }}
+              mx="auto"
+            >
               <Box>
                 <a href="tel:'+420724797522'">
                   <HStack>
