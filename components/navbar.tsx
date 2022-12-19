@@ -132,6 +132,16 @@ const Navbar = ({ dataActive }: any) => {
           >
             <MobileMenu />
           </Box>
+          <Spacer />
+          <Button
+            size="md"
+            colorScheme="green"
+            leftIcon={<IoHeartCircleOutline />}
+            rightIcon={<RiArrowRightSFill />}
+            m={0}
+          >
+            Podpořte film
+          </Button>
         </Stack>
       </Container>
     </Box>
