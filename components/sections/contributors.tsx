@@ -124,7 +124,7 @@ const ContributorsSection = () => {
           <WrapItem
             h="80px"
             key={contributor}
-            w={{ base: "90%", sm: "60%", md: "40%", lg: "unset" }}
+            w={{ base: "90%", sm: "60%", md: "40%", lg: "unset", "2xl": "15%" }}
             pl={{ base: 8, md: 0 }}
           >
             <Box p={2} w="100%" h="100%" position="relative">
@@ -186,6 +186,16 @@ const ContributorsSection = () => {
           </Box>
         </WrapItem>
       </Wrap>
+
+      <Heading
+        as="h3"
+        size="lg"
+        mt="5rem"
+        mb={6}
+        className="center ordinary-font"
+      >
+        Napsali o nás
+      </Heading>
     </Section>
   );
 };
