@@ -31,18 +31,20 @@ const ContributorsSection = () => {
         w={{ base: "100%", md: "100%" }}
         spacing={12}
       >
-        <Box mx={{ base: 4, md: 12 }}>
-          <Image
-            className="partner-logo"
-            src="/img/Impuls HK black.png"
-            alt="Centrum uměleckých aktivit Impuls Hradec Králové"
-            mx="auto"
-          />
-        </Box>
-        <Link href="">
+        <Link href="https://www.cuahk.cz" target="_blank">
+          <Box mx={{ base: 4, md: 12 }}>
+            <Image
+              className="partner-logo"
+              src="/img/Impuls HK black.png"
+              alt="Centrum uměleckých aktivit Impuls Hradec Králové"
+              mx="auto"
+            />
+          </Box>
+        </Link>
+        <Link href="" target="_blank">
           <Box
             px={5}
-            py={10}
+            py={{ base: 6, md: 9 }}
             borderRadius="1rem"
             w={{ base: "auto", md: "100%" }}
             mx={{ base: 12, md: 0 }}
@@ -68,14 +70,17 @@ const ContributorsSection = () => {
         spacing={12}
         justify="center"
       >
-        <Box mx={{ base: 4, md: 12 }}>
-          <Image
-            className="partner-logo"
-            src="/img/nu.png"
-            alt="Northumbria University v Newcastle upon Tyne"
-            mx="auto"
-          />
-        </Box>
+        <Link href="https://www.northumbria.ac.uk">
+          <Box mx={{ base: 4, md: 12 }}>
+            <Image
+              className="partner-logo"
+              src="/img/nu.png"
+              alt="Northumbria University v Newcastle upon Tyne"
+              mx="auto"
+            />
+          </Box>
+        </Link>
+
         {/* <Box mx={{ base: 4, md: 12 }}>
           <HStack gap={3} justify="center">
             <Image
@@ -119,7 +124,7 @@ const ContributorsSection = () => {
           <WrapItem
             h="80px"
             key={contributor}
-            w={{ base: "90%", sm: "50%", md: "unset" }}
+            w={{ base: "90%", sm: "60%", md: "40%", lg: "unset" }}
             pl={{ base: 8, md: 0 }}
           >
             <Box p={2} w="100%" h="100%" position="relative">
