@@ -48,16 +48,16 @@ const SupportSection = () => {
       bg="rgba(103,71,11,0.5)"
       color="white"
     >
-      <Box textAlign="center">
+      <Box textAlign="center" p={{ base: 4, xl: 12 }}>
         <Container maxW="container.xl">
           <Text fontSize="lg" mb={4}>
-            Film můžete podpořit finančně skrze crowdufundingovou platformu
-            HitHit. Níže naleznete stručný popis odměn, ze kterých si můžete na
-            HitHitu vybrat.
+            Film můžete podpořit finančně skrze crowdufundingovou platformu{" "}
+            <strong>HitHit</strong>. Níže naleznete stručný popis odměn, ze
+            kterých si můžete na <strong>HitHitu</strong> vybrat.
           </Text>
           <Text fontSize="lg" mb={8}>
-            Pakliže chcete pomoci nefinanční cestou, pošlete náš film příbuzným,
-            nebo o něm povězte kamarádům!
+            Chcete pomoci nefinanční cestou? Pošlete náš film příbuzným, nebo o
+            něm povězte kamarádům!
           </Text>
           <Button
             size={{ base: "md", lg: "lg" }}
