@@ -106,7 +106,7 @@ const ContributorsSection = () => {
       <Heading
         as="h3"
         size="lg"
-        mt="5rem"
+        mt="6rem"
         mb={4}
         className="center ordinary-font"
       >

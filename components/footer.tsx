@@ -12,13 +12,7 @@ import { SiReact } from "react-icons/si";
 
 const Footer = () => {
   return (
-    <Box
-      w="100%"
-      bgColor="white"
-      h="75px"
-      className="footer"
-      py={{ base: 12, md: 6 }}
-    >
+    <Box w="100%" bgColor="white" h="75px" className="footer" py={6}>
       <Center h="100%">
         <Container maxW="container.xl" mx={{ base: 12, md: 5, xl: 0 }}>
           <Stack
@@ -28,8 +22,8 @@ const Footer = () => {
             alignItems="center"
           >
             <Text>Michal Špitálský, &copy; 2022</Text>
-            <Spacer display={{ base: "none", md: "block" }} />
-            <Text>
+            <Spacer display={{ base: "none", md: "unset" }} />
+            <Text display={{ base: "none", md: "unset" }}>
               Made with <Icon as={SiReact} />
             </Text>
           </Stack>

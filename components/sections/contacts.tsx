@@ -39,7 +39,12 @@ const ContactCard = ({ name, image, role, children }: any) => {
 
 const ContactsSection = () => {
   return (
-    <Section anchor="contacts" heading="Kontakty">
+    <Section
+      anchor="contacts"
+      heading="Kontakty"
+      bg="url('/img/bg-imrich.webp')"
+      color="white"
+    >
       <Wrap
         align="center"
         spacing={{ base: 2, lg: 8 }}

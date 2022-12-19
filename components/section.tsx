@@ -10,6 +10,9 @@ const Section = ({ anchor, heading, bg, color, children }: any) => {
       py={12}
       px={{ base: 3, sm: 4, md: 8, lg: 12 }}
       bg={bg ? bg : "transparent"}
+      bgSize="cover"
+      bgAttachment="fixed"
+      bgBlendMode="multiply"
       color={color ? color : "black"}
       justifyContent="center"
     >

@@ -13,7 +13,7 @@ const TrailerSection = () => {
     <Section
       anchor="trailer"
       heading="Trailer"
-      bg="rgba(103,71,11,0.5)"
+      bg="url('/img/bg-chata.webp')"
       color="white"
     >
       <Box m={4}>
