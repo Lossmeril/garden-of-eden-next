@@ -26,6 +26,7 @@ import TrailerSection from "../components/sections/trailer";
 import ContributorsSection from "../components/sections/contributors";
 import ContactsSection from "../components/sections/contacts";
 import DownloadsSection from "../components/sections/downloads";
+import SupportSection from "../components/sections/support";
 
 const LazyAnimation = dynamic(() => import("../components/animation"), {
   suspense: true,
@@ -132,6 +133,8 @@ export default function Home() {
       <ContactsSection />
 
       <DownloadsSection />
+
+      <SupportSection />
     </>
   );
 }

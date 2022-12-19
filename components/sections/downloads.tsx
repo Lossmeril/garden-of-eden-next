@@ -46,7 +46,7 @@ const DownloadsSection = () => {
       >
         {/* KARTA PRO STÁHNUTÍ LOGA */}
         <WrapItem w={{ base: "100%", sm: "55%", md: "30%" }}>
-          <DownloadCard name="Logotyp" image="/img/Impuls HK black.png">
+          <DownloadCard name="Logotyp" image="/img/mockups/blank.png">
             O fortuna velut luna, statu variabilis, semper screscis aut
             decrescis, vita detestabilis.
           </DownloadCard>
@@ -54,7 +54,7 @@ const DownloadsSection = () => {
 
         {/* KARTA PRO STÁHNUTÍ PLAKÁTŮ */}
         <WrapItem w={{ base: "100%", sm: "55%", md: "30%" }}>
-          <DownloadCard name="Plakáty" image="/img/Impuls HK black.png">
+          <DownloadCard name="Plakáty" image="/img/mockups/blank.png">
             O fortuna velut luna, statu variabilis, semper screscis aut
             decrescis, vita detestabilis.
           </DownloadCard>
@@ -62,7 +62,7 @@ const DownloadsSection = () => {
 
         {/* KARTA PRO STÁHNUTÍ PRESS-KITU */}
         <WrapItem w={{ base: "100%", sm: "55%", md: "30%" }}>
-          <DownloadCard name="Press-kit" image="/img/Impuls HK black.png">
+          <DownloadCard name="Press-kit" image="/img/mockups/blank.png">
             O fortuna velut luna, statu variabilis, semper screscis aut
             decrescis, vita detestabilis.
           </DownloadCard>
