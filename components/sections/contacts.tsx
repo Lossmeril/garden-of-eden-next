@@ -17,6 +17,7 @@ import { RiPhoneFill } from "react-icons/ri";
 import { IoMailSharp } from "react-icons/io5";
 import { SiLinkedin } from "react-icons/si";
 import Link from "next/link";
+import { useTranslation } from "react-i18next";
 
 const ContactCard = ({ name, image, role, children }: any) => {
   return (
@@ -38,10 +39,12 @@ const ContactCard = ({ name, image, role, children }: any) => {
 };
 
 const ContactsSection = () => {
+  const { t } = useTranslation();
+
   return (
     <Section
       anchor="contacts"
-      heading="Kontakty"
+      heading={t("contactsTitle")}
       bg="url('/img/bg-imrich.webp')"
       color="white"
     >
@@ -56,7 +59,7 @@ const ContactsSection = () => {
           <ContactCard
             name="Jakub Tesařík"
             image="/img/avatars/jakub.webp"
-            role="producent"
+            role={t("producer")}
           >
             <VStack
               mt={6}

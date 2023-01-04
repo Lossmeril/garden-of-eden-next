@@ -8,6 +8,7 @@ import {
   Grid,
   GridItem,
 } from "@chakra-ui/react";
+import { useTranslation } from "react-i18next";
 import Section from "../section";
 
 const TeamMember = ({ name, image, role, children }: any) => {
@@ -36,13 +37,11 @@ const TeamMember = ({ name, image, role, children }: any) => {
 };
 
 const AboutSection = () => {
+  const { t } = useTranslation();
   return (
-    <Section anchor="about" heading="O filmu" bg="white">
+    <Section anchor="about" heading={t("aboutTitle")} bg="white">
       <Box className="center">
-        <Text fontSize="xl">
-          &quot;To bylo už dávno. To jsem byl ještě mladý a krásný. Teď už jsem
-          jenom krásný...&quot;
-        </Text>
+        <Text fontSize="xl">&quot;{t("quote")}&quot;</Text>
         <Text>- Imrich Špitálský</Text>
       </Box>
       <SimpleGrid
@@ -52,44 +51,16 @@ const AboutSection = () => {
       >
         <Box p={{ base: 4, xl: 12 }} textAlign={{ base: "center", md: "left" }}>
           <Heading as="h3" className="ordinary-font" mb={4} mt={6}>
-            Treatment
+            {t("treatment")}
           </Heading>
-          <Text>
-            Dokumentární snímek zachycující intimní portrét muže smiřujícího se
-            se svým věkem a ztrátou celoživotního díla. Prožívající podzim svého
-            života pečuje o svou zahradu, vtipkuje se svou ženou a vzpomíná na
-            celoživotní cestu plnou lásky k přírodě, radosti, strastí a cibulí.
-          </Text>
+          <Text>{t("treatmentContent")}</Text>
           <Heading as="h3" className="ordinary-font" mb={4} mt={6}>
-            Synopse
+            {t("synopsis")}
           </Heading>
-          <Text mb={4}>
-            Před padesáti lety si pronajal Imrich pozemek na okraji Ústí nad
-            Orlicí v zahrádkářské osadě. V té době ovšem pozemek nebyl ničím než
-            kopřivami zarostlou bažinou. Pocházeje z jižního Slovenska, kde půda
-            znamenala vše, Imrich věnoval většinu svého života zkultivování své
-            zahrady, která se stala jeho láskou a náplní volného času.
-          </Text>
-          <Text mb={4}>
-            Od jara do zimy, rok za rokem se o ni staral a vedl zahrádkářský
-            výbor. Mezitím přišly děti, vnoučata a změna režimu. Po revoluci se
-            však pozemek stal předmětem církevních restitucí a veškerá snaha o
-            jeho odkoupení narazila na nepřátelský odpor. Imrich byl tímto
-            rozhodnutím zdrcen, ale dodnes nadále aktivně pečuje o zahrádku.
-          </Text>
-          <Text mb={4}>
-            Ve svém boji musí čelit stáří, počasí, škůdcům, vlastníkům půdy a
-            zhoršujícímu se zdravotnímu stavu. Existuje šance, že se Imrich „na
-            stará kolena“ vzdá zahrady a prodá ji, nebo se mu stane tento kus
-            země osudným?
-          </Text>
-          <Text>
-            Dokumentární film nabízí intimní portrét stárnoucího člověka s
-            láskou k přírodě, který se smiřiuje se svým věkem a ztrátou
-            celoživotního díla. Mezitím vzpomíná s humorem na své mládí,
-            vtipkuje se svou ženou a pyšní se z každého výsledku a malého
-            vítězství, které mu půda a život dopřeje.
-          </Text>
+          <Text mb={4}>{t("synopsisPar1")}</Text>
+          <Text mb={4}>{t("synopsisPar2")}</Text>
+          <Text mb={4}>{t("synopsisPar3")}</Text>
+          <Text>{t("synopsisPar4")}</Text>
         </Box>
         <Box p={{ base: 4, xl: 12 }} textAlign={{ base: "center", md: "left" }}>
           <Heading
@@ -98,43 +69,29 @@ const AboutSection = () => {
             mb={4}
             mt={{ base: 0, md: 6 }}
           >
-            Tým
+            {t("crew")}
           </Heading>
           <VStack gap={12}>
             <TeamMember
               name="Michal Špitálský"
-              role="režisér"
+              role={t("director")}
               image="/img/avatars/michal.webp"
             >
-              <Text>
-                Michal je studentem oboru Film and TV Production na
-                Northumbrijské univerzitě a s příběhem byl od samého začátku a
-                měl šanci pozorovat Imricha v dobrém i zlém. Michal je v týmu
-                ten &quot;kreativní&quot;.
-              </Text>
+              <Text>{t("directorDesc")}</Text>
             </TeamMember>
             <TeamMember
               name="Jakub Tesařík"
-              role="producent"
+              role={t("producer")}
               image="/img/avatars/jakub.webp"
             >
-              <Text>
-                Jakub studuje Management v kreativním průmyslu na VŠKK a s
-                Michalem pracuje už nějaký ten pátek. Jeho profesní zaměření mu
-                umožňuje být komunikační a organizační složkou týmu.
-              </Text>
+              <Text>{t("producerDesc")}</Text>
             </TeamMember>
             <TeamMember
               name="Sam Enticknap"
-              role="hudba"
+              role={t("composer")}
               image="/img/avatars/sam.webp"
             >
-              <Text>
-                Sam vystudoval obor Film Music na konzervatoři v Yorku a k
-                projektu se dostal úplnou náhodou. I přesto se s nadšením vrhnul
-                do skládání, aby za pomoci originální hudby vhodně dokreslil
-                atmosféru.
-              </Text>
+              <Text>{t("composerDesc")}</Text>
             </TeamMember>
           </VStack>
         </Box>

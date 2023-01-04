@@ -53,27 +53,28 @@ const NavbarItem = ({ link, target, children, mobile }: any) => {
 };
 
 const MobileMenu = () => {
+  const { t } = useTranslation();
   return (
     <Menu>
       <MenuButton as={IconButton} icon={<GiHamburgerMenu />} />
       <MenuList w="100vw" borderRadius="0">
         <NavbarItem link="/" mobile="true">
-          Domů
+          {t("home")}
         </NavbarItem>
         <NavbarItem link="#about" mobile="true">
-          O filmu
+          {t("about")}
         </NavbarItem>
         <NavbarItem link="#trailer" mobile="true">
-          Trailer
+          {t("trailer")}
         </NavbarItem>
         <NavbarItem link="#donations" mobile="true">
-          Projekt podpořili
+          {t("supporters")}
         </NavbarItem>
         <NavbarItem link="#contacts" mobile="true">
-          Kontakty
+          {t("contacts")}
         </NavbarItem>
         <NavbarItem link="#press" mobile="true">
-          Ke stažení
+          {t("downloads")}
         </NavbarItem>
       </MenuList>
     </Menu>
@@ -109,12 +110,12 @@ const Navbar = ({ dataActive }: any) => {
           />
           <Spacer />
           <Center height="100%">
-            <NavbarItem link="/">Domů</NavbarItem>
-            <NavbarItem link="#about">O filmu</NavbarItem>
-            <NavbarItem link="#trailer">Trailer</NavbarItem>
-            <NavbarItem link="#donations">Projekt podpořili</NavbarItem>
-            <NavbarItem link="#contacts">Kontakty</NavbarItem>
-            <NavbarItem link="#press">Ke stažení</NavbarItem>
+            <NavbarItem link="/">{t("home")}</NavbarItem>
+            <NavbarItem link="#about">{t("about")}</NavbarItem>
+            <NavbarItem link="#trailer">{t("trailer")}</NavbarItem>
+            <NavbarItem link="#donations">{t("supporters")}</NavbarItem>
+            <NavbarItem link="#contacts">{t("contacts")}</NavbarItem>
+            <NavbarItem link="#press">{t("downloads")}</NavbarItem>
           </Center>
 
           <Spacer />
@@ -126,7 +127,7 @@ const Navbar = ({ dataActive }: any) => {
             rightIcon={<RiArrowRightSFill />}
             m={0}
           >
-            {t("supportButton0")}
+            {t("supportButtonNavbar")}
           </Button>
           <Button colorScheme="white" onClick={changeLang()} m={0} size="lg">
             {i18n.language === "cs" ? (
