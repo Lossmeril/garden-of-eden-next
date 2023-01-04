@@ -7,15 +7,17 @@ import {
   Box,
   Text,
   Image,
-  HStack,
 } from "@chakra-ui/react";
 import Link from "next/link";
+import { useTranslation } from "react-i18next";
+
 import contributors from "../../datasets/contributors";
 import Section from "../section";
 
 const ContributorsSection = () => {
+  const { t } = useTranslation();
   return (
-    <Section anchor="donations" heading="Projekt podporují" bg="white">
+    <Section anchor="donations" heading={t("suportersTitle")} bg="white">
       <Heading
         as="h3"
         size="lg"
@@ -23,7 +25,7 @@ const ContributorsSection = () => {
         mb={6}
         className="center ordinary-font"
       >
-        Generální partneři
+        {t("generalPartners")}
       </Heading>
       <Stack
         direction={{ base: "column", md: "row" }}
@@ -50,7 +52,7 @@ const ContributorsSection = () => {
             mx={{ base: 12, md: 0 }}
             bg="green.100"
           >
-            <Text textAlign="center">Vaše logo, nebo jméno může být tady!</Text>
+            <Text textAlign="center">{t("yourLogoGeneral")}</Text>
           </Box>
         </Link>
       </Stack>
@@ -62,7 +64,7 @@ const ContributorsSection = () => {
         mb={6}
         className="center ordinary-font"
       >
-        Za podpory
+        {t("supporting")}
       </Heading>
       <Stack
         my={6}
@@ -110,7 +112,7 @@ const ContributorsSection = () => {
         mb={4}
         className="center ordinary-font"
       >
-        Skrze HitHit přispěli
+        {t("crowdfundingSupporters")}
       </Heading>
 
       <Wrap
@@ -178,7 +180,7 @@ const ContributorsSection = () => {
                     textAlign="center"
                     fontSize="lg"
                   >
-                    Vaše jméno může být tady!
+                    {t("yourLogoCrowdufunding")}
                   </Text>
                 </Box>
               </Link>
@@ -194,7 +196,7 @@ const ContributorsSection = () => {
         mb={6}
         className="center ordinary-font"
       >
-        Napsali o nás
+        {t("publicity")}
       </Heading>
     </Section>
   );

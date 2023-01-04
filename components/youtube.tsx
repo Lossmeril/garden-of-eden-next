@@ -1,11 +1,14 @@
+import { useTranslation } from "react-i18next";
 import LiteYouTubeEmbed from "react-lite-youtube-embed";
 
 const YouTubeTrailer = () => {
+  const { t } = useTranslation();
+
   return (
     <LiteYouTubeEmbed
-      id="yhdX3suLNLI"
-      title="Zahrada Boží (2023) | Oficiální český trailer"
-      thumbnail="/img/thumbnail-cz.webp"
+      id={t("trailerLink")}
+      title={t("trailerVideoTitle")}
+      thumbnail={"/img/thumbnail" + t("trailerThumbnailSuffix") + ".webp"}
     />
   );
 };

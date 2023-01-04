@@ -4,6 +4,7 @@
   "subheading": "a documentary film",
   "supportButton1": "Support our crowdfunding!",
   "ctaButton1": "I wanna know more!",
+  "tagline": "Sometimes you have to reap what you did not sow",
 
   "home": "Home",
   "about": "About",
@@ -14,7 +15,7 @@
   "supportButtonNavbar": "Support the film!",
 
   "aboutTitle": "About the film",
-  "quote": "To bylo už dávno. To jsem byl ještě mladý a krásný. Teď už jsem jenom krásný...",
+  "quote": "That was ages ago. When I was still young and beautiful... now I'm just beautiful.",
   "treatment": "Tretment",
   "treatmentContent": "Dokumentární snímek zachycující intimní portrét muže smiřujícího se se svým věkem a ztrátou celoživotního díla. Prožívající podzim svého života pečuje o svou zahradu, vtipkuje se svou ženou a vzpomíná na celoživotní cestu plnou lásky k přírodě, radosti, strastí a cibulí.",
   "synopsis": "Synopse",
@@ -33,11 +34,13 @@
 
   "trailerTitle": "Trailer",
   "trailerThumbnailSuffix": "-en",
+  "trailerLink": "6e3U1l9o1SA",
+  "trailerVideoTitle": "Garden of Eden (2023) | Official international trailer",
 
   "suportersTitle": "Our Supporters",
   "generalPartners": "General partners",
   "yourLogoGeneral": "Your logo or name can be right here!",
-  "supporting": "With the support from",
+  "supporting": "With a support from",
   "crowdfundingSupporters": "Crowdfunding supporters",
   "yourLogoCrowdufunding": "You can have your name here!",
   "publicity": "Mentioned us",
