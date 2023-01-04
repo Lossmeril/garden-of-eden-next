@@ -1,4 +1,5 @@
 import "../styles/globals.scss";
+import "../modules/i18n";
 import type { AppProps } from "next/app";
 import Layout from "../layouts/layout";
 import Script from "next/script";

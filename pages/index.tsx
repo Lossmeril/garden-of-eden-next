@@ -2,7 +2,6 @@ import React, { Suspense } from "react";
 import Head from "next/head";
 import Link from "next/link";
 import dynamic from "next/dynamic";
-import NextImage from "next/image";
 
 import {
   Box,
@@ -21,6 +20,8 @@ import {
 import { IoMdFilm } from "react-icons/io";
 import { IoHeartCircleOutline } from "react-icons/io5";
 import { RiArrowRightSFill } from "react-icons/ri";
+
+/*IMPORT SECTIONS*/
 import AboutSection from "../components/sections/about";
 import TrailerSection from "../components/sections/trailer";
 import ContributorsSection from "../components/sections/contributors";
@@ -28,11 +29,16 @@ import ContactsSection from "../components/sections/contacts";
 import DownloadsSection from "../components/sections/downloads";
 import SupportSection from "../components/sections/support";
 
+/*TRANSLATIONS*/
+import { useTranslation } from "react-i18next";
+
 const LazyAnimation = dynamic(() => import("../components/animation"), {
   suspense: true,
 });
 
 export default function Home() {
+  const { t } = useTranslation();
+
   return (
     <>
       <Head>
@@ -59,19 +65,19 @@ export default function Home() {
             <Box className="headings" pt={12} mt={4} overflow="visible">
               <VStack gap={{ base: 2, md: 4, xl: 8 }} overflow="visible">
                 <Image
-                  src="/img/logos/cz_white.png"
+                  src={"/img/logos/" + t("logoPrefix") + "white.png"}
                   alt="Zahrada Boží"
                   width={{ base: "50%", sm: "45%", md: "75%", lg: "50%" }}
                 />
                 <VisuallyHidden>
-                  <Heading as="h1">Zahrada Boží</Heading>
+                  <Heading as="h1">{t("title")}</Heading>
                 </VisuallyHidden>
                 <Heading
                   as="p"
                   color="white"
                   size={{ base: "md", md: "lg", lg: "xl" }}
                 >
-                  dokumentární film
+                  {t("subheading")}
                 </Heading>
 
                 <Stack
@@ -87,7 +93,7 @@ export default function Home() {
                     leftIcon={<IoHeartCircleOutline />}
                     rightIcon={<RiArrowRightSFill />}
                   >
-                    Podpořte film na HitHitu!
+                    {t("supportButton1")}
                   </Button>
 
                   <Link href="#about">
@@ -97,7 +103,7 @@ export default function Home() {
                       leftIcon={<IoMdFilm />}
                       rightIcon={<RiArrowRightSFill />}
                     >
-                      Chci zjistit více!
+                      {t("ctaButton1")}
                     </Button>
                   </Link>
                 </Stack>
