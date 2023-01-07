@@ -107,6 +107,24 @@ export default function Home() {
                     </Button>
                   </Link>
                 </Stack>
+
+                <Heading
+                  as="p"
+                  color="white"
+                  size={{ base: "md", md: "md", lg: "lg" }}
+                  fontFamily="Space Grotesk, Arial, Helvetica, sans-serif"
+                >
+                  {t("tagline")}
+                </Heading>
+
+                <Heading
+                  as="p"
+                  color="white"
+                  size={{ base: "sm", md: "sm", lg: "md" }}
+                  fontFamily="Space Grotesk, Arial, Helvetica, sans-serif"
+                >
+                  {t("releasing")}
+                </Heading>
               </VStack>
             </Box>
           </Box>

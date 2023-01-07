@@ -10,10 +10,13 @@ import {
   Image,
   Text,
 } from "@chakra-ui/react";
+import { useTranslation } from "react-i18next";
 import { BiChevronDown } from "react-icons/bi";
 import Section from "../section";
 
 const DownloadCard = ({ name, image, children }: any) => {
+  const { t } = useTranslation();
+
   return (
     <Card mx={{ base: 6, sm: 0 }}>
       <CardBody>
@@ -27,7 +30,7 @@ const DownloadCard = ({ name, image, children }: any) => {
       </CardBody>
       <CardFooter>
         <Button colorScheme="green" rightIcon={<BiChevronDown />}>
-          Stáhnout (.zip)
+          {t("download")} (.zip)
         </Button>
       </CardFooter>
     </Card>
@@ -35,6 +38,8 @@ const DownloadCard = ({ name, image, children }: any) => {
 };
 
 const DownloadsSection = () => {
+  const { t } = useTranslation();
+
   return (
     <Section anchor="press" heading="Ke stažení" bg="white">
       <Wrap
@@ -46,7 +51,7 @@ const DownloadsSection = () => {
       >
         {/* KARTA PRO STÁHNUTÍ LOGA */}
         <WrapItem w={{ base: "100%", sm: "55%", md: "30%" }}>
-          <DownloadCard name="Logotyp" image="/img/mockups/blank.png">
+          <DownloadCard name={t("logotype")} image="/img/mockups/blank.png">
             O fortuna velut luna, statu variabilis, semper screscis aut
             decrescis, vita detestabilis.
           </DownloadCard>
@@ -54,7 +59,7 @@ const DownloadsSection = () => {
 
         {/* KARTA PRO STÁHNUTÍ PLAKÁTŮ */}
         <WrapItem w={{ base: "100%", sm: "55%", md: "30%" }}>
-          <DownloadCard name="Plakáty" image="/img/mockups/blank.png">
+          <DownloadCard name={t("posters")} image="/img/mockups/blank.png">
             O fortuna velut luna, statu variabilis, semper screscis aut
             decrescis, vita detestabilis.
           </DownloadCard>
@@ -62,7 +67,7 @@ const DownloadsSection = () => {
 
         {/* KARTA PRO STÁHNUTÍ PRESS-KITU */}
         <WrapItem w={{ base: "100%", sm: "55%", md: "30%" }}>
-          <DownloadCard name="Press-kit" image="/img/mockups/blank.png">
+          <DownloadCard name={t("pressKit")} image="/img/mockups/blank.png">
             O fortuna velut luna, statu variabilis, semper screscis aut
             decrescis, vita detestabilis.
           </DownloadCard>
