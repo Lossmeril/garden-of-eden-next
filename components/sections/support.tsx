@@ -18,8 +18,10 @@ import { BiChevronRight } from "react-icons/bi";
 import { IoHeartCircleOutline } from "react-icons/io5";
 import { RiArrowRightSFill } from "react-icons/ri";
 import Link from "next/link";
+import { useTranslation } from "react-i18next";
 
 const SupportCard = ({ name, image, children }: any) => {
+  const { t } = useTranslation();
   return (
     <Card mx={{ base: 6, sm: 0 }} bg="white" textAlign="left">
       <CardBody>
@@ -33,7 +35,7 @@ const SupportCard = ({ name, image, children }: any) => {
       </CardBody>
       <CardFooter>
         <Button colorScheme="green" rightIcon={<BiChevronRight />}>
-          Chci tuto odměnu!
+          {t("wantThisReward")}
         </Button>
       </CardFooter>
     </Card>
@@ -41,23 +43,21 @@ const SupportCard = ({ name, image, children }: any) => {
 };
 
 const SupportSection = () => {
+  const { t } = useTranslation();
   return (
     <Section
       anchor="support"
-      heading="Podpořte film"
+      heading={t("supportTitle")}
       bg="rgba(103,71,11,0.5)"
       color="white"
     >
       <Box textAlign="center" p={{ base: 4, xl: 12 }}>
         <Container maxW="container.xl">
           <Text fontSize="lg" mb={4}>
-            Film můžete podpořit finančně skrze crowdufundingovou platformu{" "}
-            <strong>HitHit</strong>. Níže naleznete stručný popis odměn, ze
-            kterých si můžete na <strong>HitHitu</strong> vybrat.
+            {t("supportPar1")}
           </Text>
           <Text fontSize="lg" mb={8}>
-            Chcete pomoci nefinanční cestou? Pošlete náš film příbuzným, nebo o
-            něm povězte kamarádům!
+            {t("supportPar2")}
           </Text>
           <Button
             size={{ base: "md", lg: "lg" }}

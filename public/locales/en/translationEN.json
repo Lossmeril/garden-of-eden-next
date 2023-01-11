@@ -27,9 +27,9 @@
 
   "crew": "Crew",
   "director": "director",
-  "directorDesc": "Michal je studentem oboru Film and TV Production na Northumbrijské univerzitě a s příběhem byl od samého začátku a měl šanci pozorovat Imricha v dobrém i zlém. Michal je v týmu ten 'kreativní'.",
+  "directorDesc": "Michal is a Film and TV Production student at Northumbria University, has been with the story since the beginning and got to see the protagonist for the better or worse. Michal fulfills the 'creative' side of the team.",
   "producer": "producer",
-  "producerDesc": "Jakub studuje Management v kreativním průmyslu na VŠKK a s Michalem pracuje už nějaký ten pátek. Jeho profesní zaměření mu umožňuje být komunikační a organizační složkou týmu.",
+  "producerDesc": "Jakub studies Management in creative industry at VŠKK and he's been working with Michal for few good years. His specialisation allows him to take care of comunication and organisation in the team.",
   "composer": "composer",
   "composerDesc": "Sam vystudoval obor Film Music na konzervatoři v Yorku a k projektu se dostal úplnou náhodou. I přesto se s nadšením vrhnul do skládání, aby za pomoci originální hudby vhodně dokreslil atmosféru.",
 
@@ -55,7 +55,7 @@
   "download": "Download",
 
   "supportTitle": "Support the film",
-  "supportPar1": "Film můžete podpořit finančně skrze crowdufundingovou platformu <strong>HitHit</strong>. Níže naleznete stručný popis odměn, ze kterých si můžete na <strong>HitHitu</strong> vybrat.",
-  "supportPar2": "Chcete pomoci nefinanční cestou? Pošlete náš film příbuzným, nebo o něm povězte kamarádům!",
+  "supportPar1": "You can support thr film financially through crowdfunding platform HitHit. The complete list of HitHit rewards to choose from is located right below.",
+  "supportPar2": "Do you want to help in a non-financial way? Send our film to relatives or tell your friends about us!",
   "wantThisReward": "I want this reward!"
 }
