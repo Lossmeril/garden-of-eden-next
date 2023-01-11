@@ -13,12 +13,18 @@ import {
   Container,
 } from "@chakra-ui/react";
 import Section from "../section";
+import Link from "next/link";
 
+/*IMPORT ICONS*/
 import { BiChevronRight } from "react-icons/bi";
 import { IoHeartCircleOutline } from "react-icons/io5";
 import { RiArrowRightSFill } from "react-icons/ri";
-import Link from "next/link";
+
+/*IMPORT TRANSLATIONS*/
 import { useTranslation } from "react-i18next";
+
+/*IMPORT LINKS*/
+import links from "../../datasets/links";
 
 const SupportCard = ({ name, image, children }: any) => {
   const { t } = useTranslation();
@@ -34,9 +40,11 @@ const SupportCard = ({ name, image, children }: any) => {
         </Stack>
       </CardBody>
       <CardFooter>
-        <Button colorScheme="green" rightIcon={<BiChevronRight />}>
-          {t("wantThisReward")}
-        </Button>
+        <Link href={links.hitHit} target="_blank">
+          <Button colorScheme="green" rightIcon={<BiChevronRight />}>
+            {t("wantThisReward")}
+          </Button>
+        </Link>
       </CardFooter>
     </Card>
   );
@@ -59,15 +67,17 @@ const SupportSection = () => {
           <Text fontSize="lg" mb={8}>
             {t("supportPar2")}
           </Text>
-          <Button
-            size={{ base: "md", lg: "lg" }}
-            colorScheme="green"
-            leftIcon={<IoHeartCircleOutline />}
-            rightIcon={<RiArrowRightSFill />}
-            mb={8}
-          >
-            Podpořte film na HitHitu!
-          </Button>
+          <Link href={links.hitHit} target="_blank">
+            <Button
+              size={{ base: "md", lg: "lg" }}
+              colorScheme="green"
+              leftIcon={<IoHeartCircleOutline />}
+              rightIcon={<RiArrowRightSFill />}
+              mb={8}
+            >
+              Podpořte film na HitHitu!
+            </Button>
+          </Link>
         </Container>
         <Wrap
           align="center"

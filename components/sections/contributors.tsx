@@ -1,3 +1,4 @@
+import Section from "../section";
 import {
   Heading,
   Center,
@@ -9,10 +10,13 @@ import {
   Image,
 } from "@chakra-ui/react";
 import Link from "next/link";
+
+/*IMPORT TRANSLATIONS*/
 import { useTranslation } from "react-i18next";
 
+/*IMPORT DATA*/
+import links from "../../datasets/links";
 import contributors from "../../datasets/contributors";
-import Section from "../section";
 
 const ContributorsSection = () => {
   const { t } = useTranslation();
@@ -33,7 +37,7 @@ const ContributorsSection = () => {
         w={{ base: "100%", md: "100%" }}
         spacing={12}
       >
-        <Link href="" target="_blank">
+        <Link href={links.hitHit} target="_blank">
           <Box
             px={5}
             py={{ base: 6, md: 9 }}
@@ -173,7 +177,7 @@ const ContributorsSection = () => {
               }
             />
             <Center w="100%" h="100%">
-              <Link href="">
+              <Link href={links.hitHit} target="_blank">
                 <Box px={5} py={3} borderRadius="md" bg="green.100">
                   <Text
                     className="contributor"
