@@ -32,6 +32,9 @@ import SupportSection from "../components/sections/support";
 /*TRANSLATIONS*/
 import { useTranslation } from "react-i18next";
 
+/*IMPORT LINKS*/
+import links from "../datasets/links";
+
 const LazyAnimation = dynamic(() => import("../components/animation"), {
   suspense: true,
 });
@@ -42,7 +45,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Zahrada Boží - dokumentární film</title>
+        <title>{t("title") + " - " + t("subheading")}</title>
         <meta name="description" content="" />
         <meta
           name="viewport"
@@ -87,14 +90,16 @@ export default function Home() {
                     xl: "row",
                   }}
                 >
-                  <Button
-                    size={{ base: "md", lg: "lg" }}
-                    colorScheme="green"
-                    leftIcon={<IoHeartCircleOutline />}
-                    rightIcon={<RiArrowRightSFill />}
-                  >
-                    {t("supportButton1")}
-                  </Button>
+                  <Link href={links.hitHit} target="_blank">
+                    <Button
+                      size={{ base: "md", lg: "lg" }}
+                      colorScheme="green"
+                      leftIcon={<IoHeartCircleOutline />}
+                      rightIcon={<RiArrowRightSFill />}
+                    >
+                      {t("supportButton1")}
+                    </Button>
+                  </Link>
 
                   <Link href="#about">
                     <Button

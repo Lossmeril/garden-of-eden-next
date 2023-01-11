@@ -1,4 +1,3 @@
-import { useTranslation } from "react-i18next";
 import {
   Box,
   Container,
@@ -13,14 +12,22 @@ import {
   MenuButton,
   MenuItem,
   MenuList,
+  Link,
 } from "@chakra-ui/react";
 import React from "react";
 import NextLink from "next/link";
+
+/*IMPORT ICONS*/
 import { IoHeartCircleOutline } from "react-icons/io5";
 import { RiArrowRightSFill } from "react-icons/ri";
 import { GiHamburgerMenu } from "react-icons/gi";
+
+/*IMPORT TRANSLATIONS*/
 import i18n from "../modules/i18n";
-import Link from "next/link";
+import { useTranslation } from "react-i18next";
+
+/*IMPORT LINKS*/
+import links from "../datasets/links";
 
 const changeLang = () => {
   return () => {
@@ -122,16 +129,17 @@ const Navbar = ({ dataActive }: any) => {
           </Center>
 
           <Spacer />
-
-          <Button
-            size="lg"
-            colorScheme="green"
-            leftIcon={<IoHeartCircleOutline />}
-            rightIcon={<RiArrowRightSFill />}
-            m={0}
-          >
-            {t("supportButtonNavbar")}
-          </Button>
+          <NextLink href={links.hitHit} target="_blank" className="button">
+            <Button
+              size="lg"
+              colorScheme="green"
+              leftIcon={<IoHeartCircleOutline />}
+              rightIcon={<RiArrowRightSFill />}
+              m={0}
+            >
+              {t("supportButtonNavbar")}
+            </Button>
+          </NextLink>
           <Button colorScheme="white" onClick={changeLang()} m={0} size="lg">
             {i18n.language === "cs" ? (
               // eslint-disable-next-line @next/next/no-img-element
