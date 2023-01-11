@@ -33,16 +33,6 @@ const ContributorsSection = () => {
         w={{ base: "100%", md: "100%" }}
         spacing={12}
       >
-        <Link href="https://www.cuahk.cz" target="_blank">
-          <Box mx={{ base: 4, md: 12 }}>
-            <Image
-              className="partner-logo"
-              src="/img/Impuls HK black.png"
-              alt="Centrum uměleckých aktivit Impuls Hradec Králové"
-              mx="auto"
-            />
-          </Box>
-        </Link>
         <Link href="" target="_blank">
           <Box
             px={5}
@@ -69,9 +59,19 @@ const ContributorsSection = () => {
       <Stack
         my={6}
         direction={{ base: "column", md: "row" }}
-        spacing={12}
+        spacing={6}
         justify="center"
       >
+        <Link href="https://www.cuahk.cz" target="_blank">
+          <Box mx={{ base: 4, md: 12 }}>
+            <Image
+              className="partner-logo"
+              src="/img/Impuls HK black.png"
+              alt="Centrum uměleckých aktivit Impuls Hradec Králové"
+              mx="auto"
+            />
+          </Box>
+        </Link>
         <Link href="https://www.northumbria.ac.uk">
           <Box mx={{ base: 4, md: 12 }}>
             <Image
