@@ -202,6 +202,36 @@ const ContributorsSection = () => {
       >
         {t("publicity")}
       </Heading>
+      <Stack
+        my={6}
+        direction={{ base: "column", md: "row" }}
+        spacing={6}
+        justify="center"
+      >
+        <Link
+          href="https://online.fliphtml5.com/epjzk/dfvn/#p=8"
+          target="_blank"
+        >
+          <Box mx={{ base: 4, md: 12 }}>
+            <Image
+              className="partner-logo"
+              src="/img/koridor.webp"
+              alt="koridor"
+              mx="auto"
+            />
+          </Box>
+        </Link>
+        {/* <Link href="https://www.northumbria.ac.uk">
+          <Box mx={{ base: 4, md: 12 }}>
+            <Image
+              className="partner-logo"
+              src="/img/idnes.webp"
+              alt="iDnes"
+              mx="auto"
+            />
+          </Box>
+        </Link> */}
+      </Stack>
     </Section>
   );
 };
