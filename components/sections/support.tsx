@@ -81,7 +81,7 @@ const SupportSection = () => {
             </Button>
           </Link>
         </Container>
-        <Wrap
+        {/* <Wrap
           align="center"
           spacing={{ base: 2, lg: 8 }}
           justify="center"
@@ -95,7 +95,7 @@ const SupportSection = () => {
               role="producent"
             ></SupportCard>
           </WrapItem>
-        </Wrap>
+        </Wrap> */}
       </Box>
     </Section>
   );
