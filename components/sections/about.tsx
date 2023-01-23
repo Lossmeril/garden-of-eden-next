@@ -10,6 +10,7 @@ import {
 } from "@chakra-ui/react";
 import { useTranslation } from "react-i18next";
 import Section from "../section";
+import Balancer from "react-wrap-balancer";
 
 const TeamMember = ({ name, image, role, children }: any) => {
   return (
@@ -57,10 +58,18 @@ const AboutSection = () => {
           <Heading as="h3" className="ordinary-font" mb={4} mt={6}>
             {t("synopsis")}
           </Heading>
-          <Text mb={4}>{t("synopsisPar1")}</Text>
-          <Text mb={4}>{t("synopsisPar2")}</Text>
-          <Text mb={4}>{t("synopsisPar3")}</Text>
-          <Text>{t("synopsisPar4")}</Text>
+          <Text mb={4}>
+            <Balancer>{t("synopsisPar1")}</Balancer>
+          </Text>
+          <Text mb={4}>
+            <Balancer>{t("synopsisPar2")}</Balancer>
+          </Text>
+          <Text mb={4}>
+            <Balancer>{t("synopsisPar3")}</Balancer>
+          </Text>
+          <Text>
+            <Balancer>{t("synopsisPar4")}</Balancer>
+          </Text>
         </Box>
         <Box p={{ base: 4, xl: 12 }} textAlign={{ base: "center", md: "left" }}>
           <Heading
@@ -77,21 +86,27 @@ const AboutSection = () => {
               role={t("director")}
               image="/img/avatars/michal.webp"
             >
-              <Text>{t("directorDesc")}</Text>
+              <Text>
+                <Balancer>{t("directorDesc")}</Balancer>
+              </Text>
             </TeamMember>
             <TeamMember
               name="Jakub Tesařík"
               role={t("producer")}
               image="/img/avatars/jakub.webp"
             >
-              <Text>{t("producerDesc")}</Text>
+              <Text>
+                <Balancer>{t("producerDesc")}</Balancer>
+              </Text>
             </TeamMember>
             <TeamMember
               name="Sam Enticknap"
               role={t("composer")}
               image="/img/avatars/sam.webp"
             >
-              <Text>{t("composerDesc")}</Text>
+              <Text>
+                <Balancer>{t("composerDesc")}</Balancer>
+              </Text>
             </TeamMember>
           </VStack>
         </Box>

@@ -26,6 +26,8 @@ import { useTranslation } from "react-i18next";
 /*IMPORT LINKS*/
 import links from "../../datasets/links";
 
+import Balancer from "react-wrap-balancer";
+
 const SupportCard = ({ name, image, children }: any) => {
   const { t } = useTranslation();
   return (
@@ -62,10 +64,10 @@ const SupportSection = () => {
       <Box textAlign="center" p={{ base: 4, xl: 12 }}>
         <Container maxW="container.xl">
           <Text fontSize="lg" mb={4}>
-            {t("supportPar1")}
+            <Balancer>{t("supportPar1")}</Balancer>
           </Text>
           <Text fontSize="lg" mb={8}>
-            {t("supportPar2")}
+            <Balancer>{t("supportPar2")}</Balancer>
           </Text>
           <Link href={links.hitHit} target="_blank">
             <Button

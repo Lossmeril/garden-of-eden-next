@@ -3,6 +3,7 @@ import "../modules/i18n";
 import type { AppProps } from "next/app";
 import Layout from "../layouts/layout";
 import Script from "next/script";
+import { Provider } from "react-wrap-balancer";
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
@@ -23,9 +24,11 @@ export default function App({ Component, pageProps }: AppProps) {
     `,
         }}
       />
-      <Layout>
-        <Component {...pageProps} />
-      </Layout>
+      <Provider>
+        <Layout>
+          <Component {...pageProps} />
+        </Layout>
+      </Provider>
     </>
   );
 }

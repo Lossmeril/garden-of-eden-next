@@ -13,6 +13,7 @@ import {
 import { useTranslation } from "react-i18next";
 import { BiChevronDown } from "react-icons/bi";
 import Section from "../section";
+import Balancer from "react-wrap-balancer";
 
 const DownloadCard = ({ name, image, children }: any) => {
   const { t } = useTranslation();
@@ -52,24 +53,31 @@ const DownloadsSection = () => {
         {/* KARTA PRO STÁHNUTÍ LOGA */}
         <WrapItem w={{ base: "100%", sm: "55%", md: "30%" }}>
           <DownloadCard name={t("logotype")} image="/img/mockups/blank.png">
-            O fortuna velut luna, statu variabilis, semper screscis aut
-            decrescis, vita detestabilis.
+            <Balancer>
+              O fortuna velut luna, statu variabilis, semper screscis aut
+              decrescis, vita detestabilis.
+            </Balancer>
           </DownloadCard>
         </WrapItem>
 
         {/* KARTA PRO STÁHNUTÍ PLAKÁTŮ */}
         <WrapItem w={{ base: "100%", sm: "55%", md: "30%" }}>
           <DownloadCard name={t("posters")} image="/img/mockups/blank.png">
-            O fortuna velut luna, statu variabilis, semper screscis aut
-            decrescis, vita detestabilis.
+            <Balancer>
+              O fortuna velut luna, statu variabilis, semper screscis aut
+              decrescis, vita detestabilis.
+            </Balancer>
           </DownloadCard>
         </WrapItem>
 
         {/* KARTA PRO STÁHNUTÍ PRESS-KITU */}
         <WrapItem w={{ base: "100%", sm: "55%", md: "30%" }}>
           <DownloadCard name={t("pressKit")} image="/img/mockups/blank.png">
-            O fortuna velut luna, statu variabilis, semper screscis aut
-            decrescis, vita detestabilis.
+            <Balancer>
+              {" "}
+              O fortuna velut luna, statu variabilis, semper screscis aut
+              decrescis, vita detestabilis.
+            </Balancer>
           </DownloadCard>
         </WrapItem>
       </Wrap>
