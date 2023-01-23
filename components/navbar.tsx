@@ -164,7 +164,11 @@ const Navbar = ({ dataActive }: any) => {
           display={{ base: "flex", lg: "none" }}
         >
           <Link href="/">
-            <Image src="/img/logos/cz_black.png" alt="Zahrada Boží" h="50px" />
+            <Image
+              src={"/img/logos/" + t("logoPrefix") + "black.png"}
+              alt="Zahrada Boží"
+              h="50px"
+            />
           </Link>
           <Spacer />
           <Box
