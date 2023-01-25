@@ -205,7 +205,7 @@ const ContributorsSection = () => {
       <Stack
         my={6}
         direction={{ base: "column", md: "row" }}
-        spacing={6}
+        spacing={3}
         justify="center"
       >
         <Link
@@ -214,23 +214,36 @@ const ContributorsSection = () => {
         >
           <Box mx={{ base: 4, md: 12 }}>
             <Image
-              className="partner-logo"
+              className="media-logo"
               src="/img/koridor.webp"
               alt="koridor"
               mx="auto"
             />
           </Box>
         </Link>
-        {/* <Link href="https://www.northumbria.ac.uk">
+        <Link
+          href="https://www.idnes.cz/pardubice/zpravy/usti-nad-orlici-dokument-film-filmari-spitalsky-tesarik-zahrada-bozi.A211223_643006_pardubice-zpravy_mvo"
+          target="_blank"
+        >
           <Box mx={{ base: 4, md: 12 }}>
             <Image
-              className="partner-logo"
+              className="media-logo"
               src="/img/idnes.webp"
               alt="iDnes"
               mx="auto"
             />
           </Box>
-        </Link> */}
+        </Link>
+        <Link href="" target="_blank">
+          <Box mx={{ base: 4, md: 12 }}>
+            <Image
+              className="media-logo"
+              src="/img/ceskyrozhlas.webp"
+              alt="Český Rozhlas Pardubice"
+              mx="auto"
+            />
+          </Box>
+        </Link>
       </Stack>
     </Section>
   );
