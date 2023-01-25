@@ -31,17 +31,31 @@ import Balancer from "react-wrap-balancer";
 const SupportCard = ({ name, image, children }: any) => {
   const { t } = useTranslation();
   return (
-    <Card mx={{ base: 6, sm: 0 }} bg="white" textAlign="left">
-      <CardBody>
-        <Image src={image} borderRadius="lg" alt="" />
+    <Card
+      maxW="md"
+      mx={{ base: 6, sm: 0 }}
+      bg="white"
+      textAlign="left"
+      variant="outlined"
+      justify="bottom"
+    >
+      <CardBody h="475px" flex="unset">
+        <Image src={image} borderRadius="lg" alt={name} />
         <Stack mt="6" spacing="3">
-          <Heading as="h3" size="md" className="ordinary-font">
+          <Heading
+            as="h3"
+            size="md"
+            className="ordinary-font"
+            textAlign="center"
+          >
             {name}
           </Heading>
-          <Text>{children}</Text>
+          <Text textAlign="center">
+            <Balancer>{children}</Balancer>
+          </Text>
         </Stack>
       </CardBody>
-      <CardFooter>
+      <CardFooter h="100px" justify="center">
         <Link href={links.hitHit} target="_blank">
           <Button colorScheme="green" rightIcon={<BiChevronRight />}>
             {t("wantThisReward")}
@@ -81,21 +95,31 @@ const SupportSection = () => {
             </Button>
           </Link>
         </Container>
-        {/* <Wrap
+        <Wrap
           align="center"
-          spacing={{ base: 2, lg: 8 }}
+          spacing={{ base: 2, md: 8 }}
           justify="center"
           py={5}
-          className="downloads-wrap"
         >
           <WrapItem w={{ base: "100%", sm: "75%", lg: "50%", xl: "20%" }}>
             <SupportCard
-              name="Jakub Tesařík"
-              image="/img/mockups/blank.png"
-              role="producent"
-            ></SupportCard>
+              name={t("thankYouLetter")}
+              image="/img/mockups/letter.jpg"
+            >
+              {t("thankYouLetterDesc")}
+            </SupportCard>
           </WrapItem>
-        </Wrap> */}
+          <WrapItem w={{ base: "100%", sm: "75%", lg: "50%", xl: "20%" }}>
+            <SupportCard name={t("a3Poster")} image="/img/mockups/poster.jpg">
+              {t("a3PosterDesc")}
+            </SupportCard>
+          </WrapItem>
+          <WrapItem w={{ base: "100%", sm: "75%", lg: "50%", xl: "20%" }}>
+            <SupportCard name={t("pieceOfLand")} image="/img/mockups/land.jpg">
+              {t("pieceOfLandDesc")}
+            </SupportCard>
+          </WrapItem>
+        </Wrap>
       </Box>
     </Section>
   );
