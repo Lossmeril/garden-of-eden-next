@@ -234,7 +234,10 @@ const ContributorsSection = () => {
             />
           </Box>
         </Link>
-        <Link href="" target="_blank">
+        <Link
+          href="https://program.rozhlas.cz/zaznamy#/pardubice/35/2023-01-26"
+          target="_blank"
+        >
           <Box mx={{ base: 4, md: 12 }}>
             <Image
               className="media-logo"
