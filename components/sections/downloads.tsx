@@ -46,7 +46,7 @@ const DownloadsSection = () => {
   const { t } = useTranslation();
 
   return (
-    <Section anchor="press" heading="Ke stažení" bg="white">
+    <Section anchor="press" heading={t("downloadsTitle")} bg="white">
       <Wrap
         align="center"
         spacing={{ base: 4, sm: 8 }}
@@ -69,7 +69,7 @@ const DownloadsSection = () => {
         </WrapItem>
 
         {/* KARTA PRO STÁHNUTÍ PLAKÁTŮ */}
-        <WrapItem
+        {/* <WrapItem
           w={{ base: "100%", sm: "55%", md: "30%" }}
           justifyContent="center"
         >
@@ -79,10 +79,10 @@ const DownloadsSection = () => {
               decrescis, vita detestabilis.
             </Balancer>
           </DownloadCard>
-        </WrapItem>
+        </WrapItem> */}
 
         {/* KARTA PRO STÁHNUTÍ PRESS-KITU */}
-        <WrapItem
+        {/* <WrapItem
           w={{ base: "100%", sm: "55%", md: "30%" }}
           justifyContent="center"
         >
@@ -93,7 +93,7 @@ const DownloadsSection = () => {
               decrescis, vita detestabilis.
             </Balancer>
           </DownloadCard>
-        </WrapItem>
+        </WrapItem> */}
       </Wrap>
     </Section>
   );
