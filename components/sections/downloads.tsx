@@ -21,7 +21,7 @@ const DownloadCard = ({ name, image, href, children }: any) => {
   const { t } = useTranslation();
 
   return (
-    <Card mx={{ base: 6, sm: 0 }} maxW="md">
+    <Card mx={{ base: 6, sm: 0 }} maxW="md" textAlign="center">
       <CardBody>
         <Image src={image} borderRadius="lg" alt="" />
         <Stack mt="6" spacing="3">
@@ -31,7 +31,7 @@ const DownloadCard = ({ name, image, href, children }: any) => {
           <Text>{children}</Text>
         </Stack>
       </CardBody>
-      <CardFooter>
+      <CardFooter justifyContent="center">
         <Link href={href} target="_blank">
           <Button colorScheme="green" rightIcon={<BiChevronDown />}>
             {t("download")} (.zip)
