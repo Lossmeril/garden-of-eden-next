@@ -107,6 +107,7 @@ export default function Home() {
                       w={{ base: "100%", xl: "auto" }}
                       leftIcon={<IoMdFilm />}
                       rightIcon={<RiArrowRightSFill />}
+                      color="black"
                     >
                       {t("ctaButton1")}
                     </Button>

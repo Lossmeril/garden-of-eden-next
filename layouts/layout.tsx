@@ -1,4 +1,4 @@
-import { ChakraProvider } from "@chakra-ui/react";
+import { ChakraProvider, LightMode } from "@chakra-ui/react";
 import React, { useState, useEffect } from "react";
 import Navbar from "../components/navbar";
 
@@ -28,9 +28,11 @@ const Layout = ({ children }: any) => {
 
   return (
     <ChakraProvider theme={theme}>
-      <Navbar dataActive={scrolled} />
-      <main>{children}</main>
-      <Footer />
+      <LightMode>
+        <Navbar dataActive={scrolled} />
+        <main>{children}</main>
+        <Footer />
+      </LightMode>
     </ChakraProvider>
   );
 };
