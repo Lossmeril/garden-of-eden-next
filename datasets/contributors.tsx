@@ -1,5 +1,5 @@
 const contributors: any[] = [
-  // "Franta Pepa Jednička",
+  "Jan Maršík",
   // "Alfons Jetel",
   // "Lady Kateřina Tesaříková, RNDr.",
   // "Vlaka Jan",
