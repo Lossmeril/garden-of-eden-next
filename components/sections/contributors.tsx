@@ -37,16 +37,14 @@ const ContributorsSection = () => {
         w={{ base: "100%", md: "100%" }}
         spacing={12}
       >
-        <Link href={links.hitHit} target="_blank">
-          <Box
-            px={5}
-            py={{ base: 6, md: 9 }}
-            borderRadius="1rem"
-            w={{ base: "auto", md: "100%" }}
-            mx={{ base: 12, md: 0 }}
-            bg="green.100"
-          >
-            <Text textAlign="center">{t("yourLogoGeneral")}</Text>
+        <Link href="https://mkpsychology.cz" target="_blank">
+          <Box mx={{ base: 4, md: 12 }}>
+            <Image
+              className="general-partner-logo"
+              src="/img/sponsors/mkpsychology.webp"
+              alt="MK Psychology"
+              mx="auto"
+            />
           </Box>
         </Link>
       </Stack>
@@ -70,17 +68,17 @@ const ContributorsSection = () => {
           <Box mx={{ base: 4, md: 12 }}>
             <Image
               className="partner-logo"
-              src="/img/Impuls HK black.png"
+              src="/img/sponsors/Impuls HK black.png"
               alt="Centrum uměleckých aktivit Impuls Hradec Králové"
               mx="auto"
             />
           </Box>
         </Link>
-        <Link href="https://www.northumbria.ac.uk">
+        <Link href="https://www.northumbria.ac.uk" target="_blank">
           <Box mx={{ base: 4, md: 12 }}>
             <Image
               className="partner-logo"
-              src="/img/nu.png"
+              src="/img/sponsors/nu.png"
               alt="Northumbria University v Newcastle upon Tyne"
               mx="auto"
             />
@@ -215,7 +213,7 @@ const ContributorsSection = () => {
           <Box mx={{ base: 4, md: 12 }}>
             <Image
               className="media-logo"
-              src="/img/koridor.webp"
+              src="/img/sponsors/koridor.webp"
               alt="koridor"
               mx="auto"
             />
@@ -228,7 +226,7 @@ const ContributorsSection = () => {
           <Box mx={{ base: 4, md: 12 }}>
             <Image
               className="media-logo"
-              src="/img/idnes.webp"
+              src="/img/sponsors/idnes.webp"
               alt="iDnes"
               mx="auto"
             />
@@ -241,7 +239,7 @@ const ContributorsSection = () => {
           <Box mx={{ base: 4, md: 12 }}>
             <Image
               className="media-logo"
-              src="/img/ceskyrozhlas.webp"
+              src="/img/sponsors/ceskyrozhlas.webp"
               alt="Český Rozhlas Pardubice"
               mx="auto"
             />
