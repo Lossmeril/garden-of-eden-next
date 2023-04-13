@@ -2,6 +2,7 @@ const contributors: any[] = [
   "Jan Maršík",
   "Libuše Maršíková",
   "Matěj Špitálský",
+  "Dagmar Kopsová",
   // "Lady Kateřina Tesaříková, RNDr.",
   // "Vlaka Jan",
   // "Mike Budka",
