@@ -123,7 +123,7 @@ const SupportSection = () => {
               rightIcon={<RiArrowRightSFill />}
               mb={8}
             >
-              Podpořte film na HitHitu!
+              {t("supportButton1")}
             </Button>
           </Link>
         </Container>
