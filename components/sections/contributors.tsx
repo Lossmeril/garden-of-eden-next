@@ -84,6 +84,16 @@ const ContributorsSection = () => {
             />
           </Box>
         </Link>
+        <Link href="https://www.coalios.cz" target="_blank">
+          <Box mx={{ base: 4, md: 12 }}>
+            <Image
+              className="partner-logo"
+              src="/img/sponsors/coalios.webp"
+              alt="coalios"
+              mx="auto"
+            />
+          </Box>
+        </Link>
 
         {/* <Box mx={{ base: 4, md: 12 }}>
           <HStack gap={3} justify="center">
