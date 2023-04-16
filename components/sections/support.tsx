@@ -11,6 +11,8 @@ import {
   Image,
   Box,
   Container,
+  AspectRatio,
+  Spinner,
 } from "@chakra-ui/react";
 import Section from "../section";
 import Link from "next/link";
@@ -27,6 +29,12 @@ import { useTranslation } from "react-i18next";
 import links from "../../datasets/links";
 
 import Balancer from "react-wrap-balancer";
+import dynamic from "next/dynamic";
+import { Suspense } from "react";
+
+const LazyYouTube = dynamic(() => import("../youtube-support"), {
+  suspense: true,
+});
 
 const SupportCard = ({ name, image, children }: any) => {
   const { t } = useTranslation();
@@ -76,6 +84,30 @@ const SupportSection = () => {
       color="white"
     >
       <Box textAlign="center" p={{ base: 4, xl: 12 }}>
+        <Box mt="-50px" mb={8}>
+          <AspectRatio
+            maxW={{ base: "100%", lg: "66%", xl: "33%" }}
+            ratio={16 / 9}
+            ml="auto"
+            mr="auto"
+          >
+            <Suspense
+              fallback={
+                <Box bgColor="blackAlpha.400">
+                  <Spinner
+                    thickness="4px"
+                    speed="0.65s"
+                    emptyColor="whiteAlpha.800"
+                    color="green.500"
+                    size="xl"
+                  />
+                </Box>
+              }
+            >
+              <LazyYouTube />
+            </Suspense>
+          </AspectRatio>
+        </Box>
         <Container maxW="container.xl">
           <Text fontSize="lg" mb={4}>
             <Balancer>{t("supportPar1")}</Balancer>
