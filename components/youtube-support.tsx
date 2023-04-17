@@ -6,7 +6,7 @@ const SupportVideo = () => {
 
   return (
     <LiteYouTubeEmbed
-      id={t("https://youtu.be/huBV9SjjYJ0")}
+      id={t("huBV9SjjYJ0")}
       title={t("supportVideoTitle")}
       thumbnail={"/img/supportthumbnail.jpg"}
     />
