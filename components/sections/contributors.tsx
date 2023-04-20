@@ -8,6 +8,7 @@ import {
   Box,
   Text,
   Image,
+  Flex,
 } from "@chakra-ui/react";
 import Link from "next/link";
 
@@ -92,6 +93,21 @@ const ContributorsSection = () => {
               alt="coalios"
               mx="auto"
             />
+          </Box>
+        </Link>
+        <Link href="https://www.coalios.cz" target="_blank">
+          <Box mx={{ base: 4, md: 12 }} h="100%">
+            <Flex align="center" h="100%">
+              <Heading
+                as="p"
+                size="xl"
+                className="ordinary-font"
+                textTransform="uppercase"
+                lineHeight="1em"
+              >
+                Rozinet s.r.o.
+              </Heading>
+            </Flex>
           </Box>
         </Link>
 

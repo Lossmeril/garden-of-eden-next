@@ -4,15 +4,7 @@ const contributors: any[] = [
   "Matěj Špitálský",
   "Dagmar Kopsová",
   "Tereza Lacková",
-  // "Lady Kateřina Tesaříková, RNDr.",
-  // "Vlaka Jan",
-  // "Mike Budka",
-  // "Teta z Bechyně",
-  // "Teta z Kolína",
-  // "Teta, co pije whiskey se sodou",
-  // "Sergeant Cross",
-  // "Jay Gatsby",
-  // "Jirka Formánek",
+  "Monika Borkovcová",
 ];
 
 export default contributors;
