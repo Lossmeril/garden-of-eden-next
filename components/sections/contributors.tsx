@@ -95,7 +95,7 @@ const ContributorsSection = () => {
             />
           </Box>
         </Link>
-        <Link href="https://www.coalios.cz" target="_blank">
+        <Link href="https://www.rozinet.net" target="_blank">
           <Box mx={{ base: 4, md: 12 }} h="100%">
             <Flex align="center" h="100%">
               <Heading
