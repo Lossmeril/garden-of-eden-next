@@ -5,6 +5,7 @@ const contributors: any[] = [
   "Dagmar Kopsová",
   "Tereza Lacková",
   "Monika Borkovcová",
+  "Hana Sádovská",
 ];
 
 export default contributors;
