@@ -95,18 +95,15 @@ const ContributorsSection = () => {
             />
           </Box>
         </Link>
-        <Link href="https://www.rozinet.net" target="_blank">
+        <Link href="https://rozinet.azurewebsites.net" target="_blank">
           <Box mx={{ base: 4, md: 12 }} h="100%">
             <Flex align="center" h="100%">
-              <Heading
-                as="p"
-                size="xl"
-                className="ordinary-font"
-                textTransform="uppercase"
-                lineHeight="1em"
-              >
-                Rozinet s.r.o.
-              </Heading>
+              <Image
+                className="partner-logo"
+                src="/img/sponsors/rozinet.svg"
+                alt="Rozinet"
+                mx="auto"
+              />
             </Flex>
           </Box>
         </Link>
