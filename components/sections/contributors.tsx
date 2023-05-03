@@ -108,6 +108,17 @@ const ContributorsSection = () => {
           </Box>
         </Link>
 
+        <Box mx={{ base: 4, md: 12 }} h="100%">
+          <Flex align="center" h="100%">
+            <Image
+              className="partner-logo"
+              src="/img/sponsors/FORT.svg"
+              alt="Rozinet"
+              mx="auto"
+            />
+          </Flex>
+        </Box>
+
         {/* <Box mx={{ base: 4, md: 12 }}>
           <HStack gap={3} justify="center">
             <Image
