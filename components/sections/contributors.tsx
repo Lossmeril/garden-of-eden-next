@@ -9,6 +9,8 @@ import {
   Text,
   Image,
   Flex,
+  SimpleGrid,
+  HStack,
 } from "@chakra-ui/react";
 import Link from "next/link";
 
@@ -59,87 +61,99 @@ const ContributorsSection = () => {
       >
         {t("supporting")}
       </Heading>
-      <Stack
-        my={6}
-        direction={{ base: "column", md: "row" }}
-        spacing={6}
-        justify="center"
+
+      <SimpleGrid
+        my={12}
+        columns={{ base: 1, md: 2, lg: 3 }}
+        spacing={12}
+        maxW="1000px"
+        mx="auto"
       >
-        <Link href="https://www.cuahk.cz" target="_blank">
-          <Box mx={{ base: 4, md: 12 }}>
-            <Image
-              className="partner-logo"
-              src="/img/sponsors/Impuls HK black.png"
-              alt="Centrum uměleckých aktivit Impuls Hradec Králové"
-              mx="auto"
-            />
-          </Box>
-        </Link>
-        <Link href="https://www.northumbria.ac.uk" target="_blank">
-          <Box mx={{ base: 4, md: 12 }}>
-            <Image
-              className="partner-logo"
-              src="/img/sponsors/nu.png"
-              alt="Northumbria University v Newcastle upon Tyne"
-              mx="auto"
-            />
-          </Box>
-        </Link>
-        <Link href="https://www.coalios.cz" target="_blank">
-          <Box mx={{ base: 4, md: 12 }}>
-            <Image
-              className="partner-logo"
-              src="/img/sponsors/coalios.webp"
-              alt="coalios"
-              mx="auto"
-            />
-          </Box>
-        </Link>
-        <Link href="https://rozinet.azurewebsites.net" target="_blank">
-          <Box mx={{ base: 4, md: 12 }} h="100%">
-            <Flex align="center" h="100%">
+        <Box w="100%">
+          <Link href="https://www.cuahk.cz" target="_blank">
+            <Box>
+              <Image
+                className="partner-logo"
+                src="/img/sponsors/Impuls HK black.png"
+                alt="Centrum uměleckých aktivit Impuls Hradec Králové"
+                mx="auto"
+              />
+            </Box>
+          </Link>
+        </Box>
+
+        <Box w="100%">
+          <Link href="https://www.northumbria.ac.uk" target="_blank">
+            <Box>
+              <Image
+                className="partner-logo"
+                src="/img/sponsors/nu.png"
+                alt="Northumbria University v Newcastle upon Tyne"
+                mx="auto"
+              />
+            </Box>
+          </Link>
+        </Box>
+
+        <Box w="100%">
+          <Link href="https://www.coalios.cz" target="_blank">
+            <Box>
+              <Image
+                className="partner-logo"
+                src="/img/sponsors/coalios.webp"
+                alt="coalios"
+                mx="auto"
+              />
+            </Box>
+          </Link>
+        </Box>
+
+        <Box w="100%">
+          <Link href="https://rozinet.azurewebsites.net" target="_blank">
+            <Box>
               <Image
                 className="partner-logo"
                 src="/img/sponsors/rozinet.svg"
                 alt="Rozinet"
                 mx="auto"
               />
-            </Flex>
-          </Box>
-        </Link>
+            </Box>
+          </Link>
+        </Box>
 
-        <Box mx={{ base: 4, md: 12 }} h="100%">
-          <Flex align="center" h="100%">
+        <Box w="100%">
+          <Box>
             <Image
               className="partner-logo"
               src="/img/sponsors/FORT.svg"
-              alt="Rozinet"
+              alt="FORT frames"
               mx="auto"
             />
-          </Flex>
+          </Box>
         </Box>
 
-        {/* <Box mx={{ base: 4, md: 12 }}>
-          <HStack gap={3} justify="center">
-            <Image
-              className="partner-logo"
-              src="/img/bab.webp"
-              alt="Obec Báb"
-            />
-            <Heading
-              as="p"
-              size="lg"
-              className="ordinary-font"
-              textTransform="uppercase"
-              lineHeight="1em"
-            >
-              Obec
-              <br />
-              Báb
-            </Heading>
-          </HStack>
-        </Box> */}
-      </Stack>
+        <Box w="100%">
+          <Link href="https://kousekpokousku.cz" target="_blank">
+            <HStack justify="center" w="100%" spacing={5}>
+              <Image
+                className="partner-logo"
+                src="/img/sponsors/kousekpokousku.svg"
+                alt="Nadační fond Kousek po Kousku"
+              />
+              <Heading
+                as="p"
+                size="md"
+                className="ordinary-font"
+                lineHeight="1em"
+              >
+                Nadační fond
+                <br />
+                Kousek po Kousku
+              </Heading>
+            </HStack>
+          </Link>
+        </Box>
+      </SimpleGrid>
 
       <Heading
         as="h3"
@@ -194,7 +208,7 @@ const ContributorsSection = () => {
           </WrapItem>
         ))}
 
-        <WrapItem h="80px">
+        {/* <WrapItem h="80px">
           <Box p={5} w="100%" h="100%" position="relative">
             <Image
               src="/img/sad-little-cup.webp"
@@ -222,7 +236,7 @@ const ContributorsSection = () => {
               </Link>
             </Center>
           </Box>
-        </WrapItem>
+        </WrapItem> */}
       </Wrap>
 
       <Heading

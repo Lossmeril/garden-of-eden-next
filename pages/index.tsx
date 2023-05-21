@@ -90,26 +90,26 @@ export default function Home() {
                     xl: "row",
                   }}
                 >
-                  <Link href={links.hitHit} target="_blank">
-                    <Button
-                      size={{ base: "md", lg: "lg" }}
-                      colorScheme="green"
-                      leftIcon={<IoHeartCircleOutline />}
-                      rightIcon={<RiArrowRightSFill />}
-                    >
-                      {t("supportButton1")}
-                    </Button>
-                  </Link>
-
                   <Link href="#about">
                     <Button
                       size={{ base: "md", lg: "lg" }}
-                      w={{ base: "100%", xl: "auto" }}
+                      colorScheme="green"
+                      rightIcon={<RiArrowRightSFill />}
                       leftIcon={<IoMdFilm />}
+                    >
+                      {t("ctaButton1")}
+                    </Button>
+                  </Link>
+
+                  <Link href={links.hitHit} target="_blank">
+                    <Button
+                      size={{ base: "md", lg: "lg" }}
+                      w={{ base: "100%", xl: "auto" }}
+                      leftIcon={<IoHeartCircleOutline />}
                       rightIcon={<RiArrowRightSFill />}
                       color="black"
                     >
-                      {t("ctaButton1")}
+                      {t("supportButton1")}
                     </Button>
                   </Link>
                 </Stack>
@@ -164,7 +164,7 @@ export default function Home() {
 
       <DownloadsSection />
 
-      <SupportSection />
+      {/* <SupportSection /> */}
     </>
   );
 }

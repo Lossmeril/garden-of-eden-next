@@ -18,7 +18,7 @@ import React from "react";
 import NextLink from "next/link";
 
 /*IMPORT ICONS*/
-import { IoHeartCircleOutline } from "react-icons/io5";
+import { ImPlay } from "react-icons/im";
 import { RiArrowRightSFill } from "react-icons/ri";
 import { GiHamburgerMenu } from "react-icons/gi";
 
@@ -129,15 +129,15 @@ const Navbar = ({ dataActive }: any) => {
           </Center>
 
           <Spacer />
-          <NextLink href={links.hitHit} target="_blank" className="button">
+          <NextLink href="#trailer" className="button">
             <Button
               size="lg"
               colorScheme="green"
-              leftIcon={<IoHeartCircleOutline />}
+              leftIcon={<ImPlay />}
               rightIcon={<RiArrowRightSFill />}
               m={0}
             >
-              {t("supportButtonNavbar")}
+              {t("buttonNavbar")}
             </Button>
           </NextLink>
           <Button colorScheme="white" onClick={changeLang()} m={0} size="lg">
