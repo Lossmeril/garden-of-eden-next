@@ -8,7 +8,6 @@ import {
   Box,
   Text,
   Image,
-  Flex,
   SimpleGrid,
   HStack,
 } from "@chakra-ui/react";
@@ -109,11 +108,11 @@ const ContributorsSection = () => {
         </Box>
 
         <Box w="100%">
-          <Link href="https://rozinet.azurewebsites.net" target="_blank">
+          <Link href="https://www.rozinet.net" target="_blank">
             <Box>
               <Image
                 className="partner-logo"
-                src="/img/sponsors/rozinet.svg"
+                src="/img/sponsors/rozinet.png"
                 alt="Rozinet"
                 mx="auto"
               />
