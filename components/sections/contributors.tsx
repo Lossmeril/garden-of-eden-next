@@ -115,6 +115,7 @@ const ContributorsSection = () => {
                 src="/img/sponsors/rozinet.png"
                 alt="Rozinet"
                 mx="auto"
+                w="65%"
               />
             </Box>
           </Link>
